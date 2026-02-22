@@ -1,0 +1,4 @@
+name,symb,coup_type,initial_amount,interest,open_date
+Unicredit,UNCR,half_year,100,0.01,1990-12-12
+Banka DSK,DSK,year,1000,0.03,2002-12-12
+Poshtenska,POST,year,10000,0.06,2007-09-12

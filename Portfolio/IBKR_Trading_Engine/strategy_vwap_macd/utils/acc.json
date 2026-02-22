@@ -1,0 +1,570 @@
+{
+  "accountcode": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "DUH196417",
+    "severity": 0
+  },
+  "accountready": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "true",
+    "severity": 0
+  },
+  "accounttype": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "INDIVIDUAL",
+    "severity": 0
+  },
+  "accruedcash": {
+    "amount": 123.61000061035156,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "accruedcash-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "accrueddividend": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "accrueddividend-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "availablefunds": {
+    "amount": 45372.12109375,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "availablefunds-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "billable": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "billable-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "buyingpower": {
+    "amount": 302480.8125,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "columnprio-p": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "5",
+    "severity": 0
+  },
+  "columnprio-s": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "1",
+    "severity": 0
+  },
+  "cushion": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "0.608976",
+    "severity": 0
+  },
+  "depositoncredithold": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "null",
+    "severity": 0
+  },
+  "equitywithloanvalue": {
+    "amount": 99832.7578125,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "equitywithloanvalue-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "excessliquidity": {
+    "amount": 60796.96875,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "excessliquidity-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "fullavailablefunds": {
+    "amount": 45372.12109375,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "fullavailablefunds-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "fullexcessliquidity": {
+    "amount": 60796.96875,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "fullexcessliquidity-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "fullinitmarginreq": {
+    "amount": 54460.640625,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "fullinitmarginreq-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "fullmaintmarginreq": {
+    "amount": 39037.78125,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "fullmaintmarginreq-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "grosspositionvalue": {
+    "amount": 26496.66015625,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "grosspositionvalue-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "guarantee": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "guarantee-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "highestseverity": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "null",
+    "severity": 0
+  },
+  "incentivecoupons": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "incentivecoupons-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "indianstockhaircut": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "indianstockhaircut-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "initmarginreq": {
+    "amount": 54460.640625,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "initmarginreq-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "leverage-p": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "0.0",
+    "severity": 0
+  },
+  "leverage-s": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "0.27",
+    "severity": 0
+  },
+  "lookaheadavailablefunds": {
+    "amount": 45372.12109375,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "lookaheadavailablefunds-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "lookaheadexcessliquidity": {
+    "amount": 60796.96875,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "lookaheadexcessliquidity-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "lookaheadinitmarginreq": {
+    "amount": 54460.640625,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "lookaheadinitmarginreq-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "lookaheadmaintmarginreq": {
+    "amount": 39037.78125,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "lookaheadmaintmarginreq-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "lookaheadnextchange": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "1742563800",
+    "severity": 0
+  },
+  "maintmarginreq": {
+    "amount": 39037.78125,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "maintmarginreq-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "netliquidation": {
+    "amount": 99834.7421875,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "netliquidation-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "netliquidationuncertainty": {
+    "amount": 1.9800000190734863,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "nlvandmargininreview": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "false",
+    "severity": 0
+  },
+  "pasharesvalue": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "pasharesvalue-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "physicalcertificatevalue": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "physicalcertificatevalue-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "postexpirationexcess": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "postexpirationexcess-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "postexpirationmargin": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "postexpirationmargin-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "segmenttitle-p": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "Crypto at Paxos",
+    "severity": 0
+  },
+  "segmenttitle-s": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "CFD",
+    "severity": 0
+  },
+  "totalcashvalue": {
+    "amount": 108120.7890625,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "totalcashvalue-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "totaldebitcardpendingcharges": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "totaldebitcardpendingcharges-p": {
+    "amount": 0.0,
+    "currency": "USD",
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": null,
+    "severity": 0
+  },
+  "tradingtype-s": {
+    "amount": 0.0,
+    "currency": null,
+    "isNull": false,
+    "timestamp": 1742504539000,
+    "value": "STKNOPT",
+    "severity": 0
+  }
+}

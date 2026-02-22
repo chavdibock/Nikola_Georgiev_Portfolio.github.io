@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Portfolio — projects in ML, trading systems, C++/Python/Java OOP, and research." />
+    <title>Your Name — Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="hero-copy">
+
+                    <div class="profile-wrapper">
+                        <img src="images/prof_picture.png" alt="Your Name" class="profile-img-large">
+                    </div>
+                    <div>
+                        <h1>Your Name</h1>
+                        <p class="subtitle">ML • Quant/Trading Systems • C++ • Research</p>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#research">Research</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h2>Building fast ML systems and trading engines.</h2>
+                    <p>
+                        I work on real-time ML, backtesting/live trading systems, and performance-focused C++ projects.
+                        Here are selected projects and research areas.
+                    </p>
+
+                    <div class="cta-row">
+                        <a class="btn primary" href="#projects">View Projects</a>
+                        <a class="btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+                        <a class="btn" href="YOUR_RESUME_LINK" target="_blank" rel="noreferrer">Resume</a>
+                    </div>
+
+                    <div class="pill-row" aria-label="Highlights">
+                        <span class="pill">C++ (GPU)</span>
+                        <span class="pill">ML (KNN, OC-SVM)</span>
+                        <span class="pill">Backtesting</span>
+                        <span class="pill">MLOps</span>
+                    </div>
+                </div>
+
+                <aside class="hero-card">
+                    <div class="card">
+                        <h3>Quick Info</h3>
+                        <ul class="meta">
+                            <li><span>Location</span><b>Your City</b></li>
+                            <li><span>Focus</span><b>ML + Trading Systems</b></li>
+                            <li><span>Open to</span><b>Internships / Roles</b></li>
+                        </ul>
+                        <div class="small">
+                            Tip: Replace placeholders (YOUR_GITHUB, resume link, your name).
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container section-head">
+                <h2>Projects</h2>
+                <div class="filters" role="group" aria-label="Project filters">
+                    <button class="chip active" data-filter="all">All</button>
+                    <button class="chip" data-filter="ml">ML</button>
+                    <button class="chip" data-filter="trading">Trading</button>
+                    <button class="chip" data-filter="cpp">C++</button>
+                    <button class="chip" data-filter="python">Python</button>
+                    <button class="chip" data-filter="java">Java</button>
+                    <button class="chip" data-filter="research">Research</button>
+                </div>
+            </div>
+
+            <div class="container grid" id="projectGrid">
+                <!-- 1 -->
+                <article class="project card" data-tags="ml cpp">
+                    <div class="project-top">
+                        <h3>Senior Thesis — GPU DDoS Detection (KNN + OC-SVM)</h3>
+                        <p class="muted">
+                            Automated DDoS detection pipeline using KNN and One-Class SVM, implemented in C++ with GPU
+                            acceleration.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Real-time classification design (feature extraction → inference → alerting)</li>
+                        <li>Performance focus: C++ + GPU for low latency</li>
+                        <li>Modeling: anomaly detection via OC-SVM + baseline KNN</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">ML</span><span class="tag">C++</span><span class="tag">GPU</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_THESIS" target="_blank" rel="noreferrer">Code</a>
+                        <a href="DEMO_LINK_THESIS" target="_blank" rel="noreferrer">Demo</a>
+                        <a href="WRITEUP_LINK_THESIS" target="_blank" rel="noreferrer">Write-up</a>
+                    </div>
+                </article>
+
+                <!-- 2 -->
+                <article class="project card" data-tags="trading python">
+                    <div class="project-top">
+                        <h3>Trading Backtesting & Live Engine</h3>
+                        <p class="muted">
+                            Strategy research toolkit and production-style live trading engine with reusable components.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Event-driven backtesting (orders, fills, slippage, fees)</li>
+                        <li>Live execution layer and monitoring hooks</li>
+                        <li>Strategy interface for fast experimentation</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Trading</span><span class="tag">Python</span><span class="tag">Systems</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_ENGINE" target="_blank" rel="noreferrer">Code</a>
+                        <a href="DEMO_LINK_ENGINE" target="_blank" rel="noreferrer">Demo</a>
+                    </div>
+                </article>
+
+                <!-- 3 -->
+                <article class="project card" data-tags="trading ml">
+                    <div class="project-top">
+                        <h3>Portfolio Balancer — S&P 500 Volatility (STD-based)</h3>
+                        <p class="muted">
+                            Rebalancing logic driven by rolling standard deviation of the S&P 500 to adapt risk
+                            exposure.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Rolling volatility estimator and allocation rules</li>
+                        <li>Backtested risk-on / risk-off variants</li>
+                        <li>Metrics: drawdown, Sharpe, turnover</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Trading</span><span class="tag">Risk</span><span
+                            class="tag">Backtesting</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_BALANCER" target="_blank" rel="noreferrer">Code</a>
+                        <a href="WRITEUP_LINK_BALANCER" target="_blank" rel="noreferrer">Notes</a>
+                    </div>
+                </article>
+
+                <!-- 4 -->
+                <article class="project card" data-tags="ml trading python">
+                    <div class="project-top">
+                        <h3>Live Trading + Backtesting AI Model (MLOps Setup)</h3>
+                        <p class="muted">
+                            End-to-end ML workflow: training, versioning, deployment, and evaluation tied into backtest
+                            + live runs.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Training pipelines + reproducibility (configs, seeds, artifacts)</li>
+                        <li>Model registry + experiment tracking (MLOps pattern)</li>
+                        <li>Drift monitoring / periodic retraining hooks</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">ML</span><span class="tag">Trading</span><span class="tag">MLOps</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_MLOPS" target="_blank" rel="noreferrer">Code</a>
+                        <a href="ARCH_LINK_MLOPS" target="_blank" rel="noreferrer">Architecture</a>
+                    </div>
+                </article>
+
+                <!-- 5 -->
+                <article class="project card" data-tags="cpp">
+                    <div class="project-top">
+                        <h3>C++ OOP</h3>
+                        <p class="muted">Object-oriented patterns, memory management, and clean architecture in modern
+                            C++.</p>
+                    </div>
+                    <ul class="bullets">
+                        <li>RAII, rule-of-five, smart pointers</li>
+                        <li>Interfaces, polymorphism, templates</li>
+                        <li>Unit tests + small demo apps</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">C++</span><span class="tag">OOP</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_CPP_OOP" target="_blank" rel="noreferrer">Code</a>
+                    </div>
+                </article>
+
+                <!-- 6 -->
+                <article class="project card" data-tags="python">
+                    <div class="project-top">
+                        <h3>Python OOP</h3>
+                        <p class="muted">OOP fundamentals, design patterns, and practical mini-projects in Python.</p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Dataclasses, typing, SOLID principles</li>
+                        <li>Patterns: factory, strategy, observer</li>
+                        <li>Testing + packaging basics</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Python</span><span class="tag">OOP</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_PY_OOP" target="_blank" rel="noreferrer">Code</a>
+                    </div>
+                </article>
+
+                <!-- 7 -->
+                <article class="project card" data-tags="java">
+                    <div class="project-top">
+                        <h3>Java OOP + DB — Fractal Tree</h3>
+                        <p class="muted">
+                            Java OOP project with database integration, modeling a fractal tree structure and
+                            persistence layer.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Entity modeling + DB schema design</li>
+                        <li>CRUD operations and query layer</li>
+                        <li>Visualization / generation logic (fractal tree)</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Java</span><span class="tag">DB</span><span class="tag">OOP</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_JAVA_FRACTAL" target="_blank" rel="noreferrer">Code</a>
+                    </div>
+                </article>
+
+                <!-- 8 -->
+                <article class="project card" data-tags="research">
+                    <div class="project-top">
+                        <h3>Smart Cities Research</h3>
+                        <p class="muted">
+                            Research on smart cities: sensing, optimization, data pipelines, and responsible deployment.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>IoT data collection and edge/cloud architecture</li>
+                        <li>Analytics for mobility, energy, and safety</li>
+                        <li>Privacy / governance considerations</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Research</span><span class="tag">IoT</span><span class="tag">Data</span>
+                    </div>
+                    <div class="links">
+                        <a href="WRITEUP_LINK_SMARTCITIES" target="_blank" rel="noreferrer">Notes</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section alt">
+            <div class="container two-col">
+                <div>
+                    <h2>Skills</h2>
+                    <p class="muted">A quick snapshot of tools I’m comfortable with.</p>
+
+                    <div class="skill-grid">
+                        <div class="card mini">
+                            <h3>C++ / Performance</h3>
+                            <p>OOP, RAII, multithreading, profiling, GPU basics</p>
+                        </div>
+                        <div class="card mini">
+                            <h3>Python</h3>
+                            <p>Backtesting, data pipelines, ML workflows, testing</p>
+                        </div>
+                        <div class="card mini">
+                            <h3>ML / MLOps</h3>
+                            <p>Modeling, evaluation, tracking, deployment patterns</p>
+                        </div>
+                        <div class="card mini">
+                            <h3>Java / DB</h3>
+                            <p>OOP, persistence, schema design, CRUD patterns</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>About</h3>
+                    <p>
+                        Write 3–5 lines about what you’re aiming for (roles, topics, what you enjoy building).
+                        Keep it specific: performance ML systems, trading infrastructure, research, etc.
+                    </p>
+                    <ul class="bullets">
+                        <li>Favorite areas: low-latency systems, reproducible research, robust evaluation</li>
+                        <li>Interested in: quant, ML engineering, applied research</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <div class="container">
+                <h2>Research</h2>
+                <p class="muted">
+                    Add publications, posters, or a short reading list here. Keep it simple and link out.
+                </p>
+
+                <div class="card">
+                    <h3>Smart Cities</h3>
+                    <ul class="bullets">
+                        <li>Topic A: e.g., mobility prediction, sensor fusion</li>
+                        <li>Topic B: e.g., anomaly detection for infrastructure</li>
+                        <li>Topic C: e.g., privacy-preserving analytics</li>
+                    </ul>
+                    <div class="links">
+                        <a href="WRITEUP_LINK_SMARTCITIES" target="_blank" rel="noreferrer">Research Notes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section alt">
+            <div class="container contact">
+                <div>
+                    <h2>Contact</h2>
+                    <p class="muted">Best way to reach me:</p>
+                    <ul class="meta">
+                        <li><span>Email</span><b>you@email.com</b></li>
+                        <li><span>GitHub</span><b>@YOUR_GITHUB</b></li>
+                        <li><span>LinkedIn</span><b>/in/YOUR_LINKEDIN</b></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Want the “multi-page” version?</h3>
+                    <p class="muted">
+                        If you later want a Projects page per repo + blog posts, I can convert this to Jekyll or Astro.
+                    </p>
+                    <div class="small">
+                        For now this single page is simplest for GitHub Pages.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Your Name</span>
+            <span class="muted">Built for GitHub Pages</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

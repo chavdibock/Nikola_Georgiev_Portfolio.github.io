@@ -1,0 +1,3 @@
+name,symb,coup_type,initial_amount,interest,expr_date
+Bulgarian National Bond,BNB,half_year,1000.0,0.01,2050-12-15
+US National Bond,USNB,year,1000,0.03,2030-09-13

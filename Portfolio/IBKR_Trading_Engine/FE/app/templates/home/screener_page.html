@@ -1,0 +1,95 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Home {% endblock title %}
+{% block content %}
+<style>
+    #myTable thead th,
+    #myTable tbody td {
+        color: white !important;
+    }
+
+    #myTable tbody tr:hover {
+        background-color: #495057 !important;
+    }
+
+    .dataTables_filter input {
+        color: white !important;
+        border: 1px solid #6c757d !important; /* Optional: Adds a border */
+    }
+
+    .dataTables_filter input::placeholder {
+        color: #adb5bd !important;
+    }
+
+
+</style>
+
+<div class="card mt-3">
+    <div class="card-body">
+        <div id="btn-holder" class="col-xl-4 col-sm-6 grid-margin d-flex gap-3 justify-content-start stretch-card">
+            <a href="/manage" target="_blank" class="btn btn-warning">Volume Screener</a>
+            <a href="/manage" target="_blank" class="btn btn-warning">PRC Change Screener</a>
+        </div>
+
+        <div id="pos-table">
+            <table id="myTable" class="table table-striped" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Contract ID</th>
+                    <th>Ticker</th>
+                    <th>Screener Weight</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+{% block javascripts %}
+
+<script>
+    $(document).ready(function () {
+
+        table = $('#myTable').DataTable({
+            "ajax": {
+                "url": "/screener-stocks", // Your data source URL
+                "dataSrc": "" // Leave empty if the API returns a direct array
+            },
+            "columns": [
+                {"data": "con_id"},          // Contract ID
+                {"data": "ticker"},
+                {"data": "screener_weight"},
+
+                {
+                    "data": "contractDesc", // This will use the contractDesc to creaote the button
+                    "render": function (data, type, row) {
+                        var symbol = row.ticker;  // Use the contractDesc for symbol
+                        var url = "https://www.tradingview.com/symbols/" + symbol + "/";  // Create the TradingView URL
+                        return '<a href="' + url + '" target="_blank" class="btn btn-primary">View on TradingView</a>';  // Create button with link
+                    }
+                },
+                {
+                    "data": "conid",  // This will use the conid to create the Manage URL
+                    "render": function (data, type, row) {
+                        var conid = row.conid;  // Use the conid to generate the manage URL
+                        return '<a href="/manage" target="_blank" class="btn btn-danger">Manage</a>';  // Create button with link
+                    }
+                }
+            ],
+            "responsive": true,
+            "paging": true,
+            "searching": true, "scrollY": "400px",         // Vertical scroll height
+            "scrollX": true,
+            "scrollY": true,
+
+        });
+
+
+
+
+    });
+</script>
+{% endblock javascripts %}

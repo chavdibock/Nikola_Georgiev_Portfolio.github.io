@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Nikola Georgiev — projects in GPU-accelerated ML for security, algorithmic trading microservices, and quant research tooling." />
+    <title>Nikola Georgiev — Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="hero-copy">
+
+                    <div class="profile-wrapper">
+                        <img src="images/prof_picture.png" alt="Nikola Georgiev" class="profile-img-large">
+                    </div>
+                    <div>
+                        <h1>Nikola Georgiev</h1>
+                        <p class="subtitle">GPU ML • Security Systems • Algo Trading • Microservices</p>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#research">Research</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <h2>Building high-performance ML + trading systems.</h2>
+                    <p>
+                        I build real-time anomaly detection pipelines, containerized trading infrastructure, and
+                        research-grade backtesting/analytics tooling. Below are selected projects with a focus on
+                        performance, reliability, and reproducibility.
+                    </p>
+
+                    <div class="cta-row">
+                        <a class="btn primary" href="#projects">View Projects</a>
+                        <a class="btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+                        <a class="btn" href="YOUR_RESUME_LINK" target="_blank" rel="noreferrer">Resume</a>
+                    </div>
+
+                    <div class="pill-row" aria-label="Highlights">
+                        <span class="pill">C++17 / CUDA</span>
+                        <span class="pill">FastAPI Microservices</span>
+                        <span class="pill">MySQL-driven Systems</span>
+                        <span class="pill">Backtesting / Research</span>
+                    </div>
+                </div>
+
+                <aside class="hero-card">
+                    <div class="card">
+                        <h3>Quick Info</h3>
+                        <ul class="meta">
+                            <li><span>Focus</span><b>Security ML + Trading Infrastructure</b></li>
+                            <li><span>Strengths</span><b>Performance, Systems Design, Data Pipelines</b></li>
+                            <li><span>Open to</span><b>Internships / Roles</b></li>
+                        </ul>
+                        <div class="small">
+                            Tip: Update GitHub / resume / contact links below to your real profiles.
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container section-head">
+                <h2>Projects</h2>
+                <div class="filters" role="group" aria-label="Project filters">
+                    <button class="chip active" data-filter="all">All</button>
+                    <button class="chip" data-filter="ml">ML</button>
+                    <button class="chip" data-filter="trading">Trading</button>
+                    <button class="chip" data-filter="cpp">C++</button>
+                    <button class="chip" data-filter="python">Python</button>
+                    <button class="chip" data-filter="java">Java</button>
+                    <button class="chip" data-filter="research">Research</button>
+                </div>
+            </div>
+
+            <div class="container grid" id="projectGrid">
+                <!-- 1 -->
+                <article class="project card" data-tags="ml cpp python research">
+                    <div class="project-top">
+                        <h3>GPU-Accelerated DDoS Detection & Classification (Senior Thesis)</h3>
+                        <p class="muted">
+                            Real-time DDoS detection for NAT-obscured enterprise networks: rolling-window feature engineering,
+                            GPU-accelerated k-NN & OC-SVM inference, and FastAPI microservices validated in a GNS3 simulation.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Packet capture + statistical features every 5s (rate/bytes, SYN/ACK ratio, TCP flags)</li>
+                        <li>Python ↔ C++/CUDA inference via pybind11 for low-latency classification</li>
+                        <li>Stateful per-IP tracking (CLEAR / UNDER_ATTACK) with REST APIs</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">ML</span><span class="tag">C++</span><span class="tag">CUDA</span><span class="tag">FastAPI</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_DDOS" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+
+                <!-- 2 -->
+                <article class="project card" data-tags="trading python research">
+                    <div class="project-top">
+                        <h3>Algorithmic Trading Microservices (Docker + FastAPI + MySQL + IBKR)</h3>
+                        <p class="muted">
+                            Containerized, distributed trading system with clear service boundaries: screeners, strategies,
+                            execution gateway, and UI backend—all orchestrated via Docker Compose.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>IBKR integration via a dedicated client service to centralize rate limits + connectivity</li>
+                        <li>Screeners: top gainers + fundamentals/STD filtering, NASDAQ earnings scraping</li>
+                        <li>Strategies: fundamentals + MACD/VWAP execution, DB-backed state and audit trail</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Trading</span><span class="tag">Python</span><span class="tag">Microservices</span><span class="tag">Docker</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_TRADING_MICROSERVICES" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+
+                <!-- 3 -->
+                <article class="project card" data-tags="trading python">
+                    <div class="project-top">
+                        <h3>Crypto Live Engine (Freqtrade Workflow via MySQL)</h3>
+                        <p class="muted">
+                            Lightweight live-crypto workflow layer around Freqtrade where modules communicate through a shared
+                            MySQL database—keeping ops simple (no Redis/event bus required).
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Market data ingestion → normalized candles/tickers stored in MySQL</li>
+                        <li>Strategy core produces signals/trades; execution layer manages orders, fills, positions</li>
+                        <li>Reporting reads DB tables for PnL, drawdown, health metrics, and auditability</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Trading</span><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Live</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_CRYPTO_LIVE" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+
+                <!-- 4 -->
+                <article class="project card" data-tags="trading python research ml">
+                    <div class="project-top">
+                        <h3>Crypto Backtesting Engine (Backtesting.py + MySQL)</h3>
+                        <p class="muted">
+                            Modular quantitative research framework for crypto markets: deterministic backtests, indicator pipelines,
+                            parameter optimization, benchmarking, and risk analytics—using MySQL as the integration backbone.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Backtest execution with commission/slippage, equity/drawdown tracking</li>
+                        <li>Optimization workflows (parameter sweeps, walk-forward testing, comparisons)</li>
+                        <li>Reporting: equity curves, trade overlays, and core performance metrics</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Trading</span><span class="tag">Research</span><span class="tag">Python</span><span class="tag">Backtesting</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_CRYPTO_BACKTEST" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+
+                <!-- 5 -->
+                <article class="project card" data-tags="trading python ml research">
+                    <div class="project-top">
+                        <h3>Portfolio Balancer / Stock Classifier (Robust Z-Score Screener)</h3>
+                        <p class="muted">
+                            Relative-value stock screener that enriches tickers with valuation inputs, computes robust z-scores,
+                            and classifies names into Buy/Hold/Sell with optional variance/covariance exports.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Outlier-resistant scoring: Tukey fences, median/MAD z-scores, composite ranking</li>
+                        <li>Derived valuation ratios (P/B, P/Cashflow, etc.) and liquidity filtering</li>
+                        <li>Optional 1-month return variance/covariance + historical returns Excel export</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Trading</span><span class="tag">ML</span><span class="tag">Python</span><span class="tag">Stats</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_STOCK_CLASSIFIER" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+
+                
+                <article class="project card" data-tags="java" data-link="REPO_LINK_DDOS">
+                    <div class="project-top">
+                        <h3>The Snowbox — FractalTrees Engine (Java Swing)</h3>
+                        <p class="muted">
+                            Interactive procedural-art app: click-to-spawn snowflakes that fall, transform, and grow into recursive
+                            fractal trees, with a gallery and export workflow.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Recursive rendering engine with depth control + stochastic variation for organic growth</li>
+                        <li>Interactive scene tools (fractal sun, reset/refresh, save + gallery)</li>
+                        <li>Clean mathematical model (trigonometric branching + scaling per recursion level)</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">Java</span><span class="tag">Graphics</span><span class="tag">Recursion</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_SNOWBOX" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+
+                
+                <article class="project card" data-tags="java cpp">
+                    <div class="project-top">
+                        <h3>Asset Portfolio System (OOP Design Showcase)</h3>
+                        <p class="muted">
+                            A clean 3-level inheritance hierarchy modeling financial assets, demonstrating abstraction,
+                            polymorphism, encapsulation, and UML-driven design.
+                        </p>
+                    </div>
+                    <ul class="bullets">
+                        <li>Base Asset abstraction → Equity vs Debt categories → concrete instruments (Stock, Crypto, Bond, etc.)</li>
+                        <li>Runtime polymorphism for risk/performance evaluation across asset types</li>
+                        <li>Extendable architecture for adding new instruments with minimal changes</li>
+                    </ul>
+                    <div class="tag-row">
+                        <span class="tag">OOP</span><span class="tag">UML</span><span class="tag">Design</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_ASSET_PORTFOLIO" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section alt">
+            <div class="container two-col">
+                <div>
+                    <h2>Skills</h2>
+                    <div class="skill-grid">
+                        <div class="card mini">
+                            <h3>C++ / CUDA / Performance</h3>
+                            <p>Modern C++ (RAII), profiling, GPU acceleration, native bindings (pybind11)</p>
+                        </div>
+                        <div class="card mini">
+                            <h3>Python / Data</h3>
+                            <p>FastAPI, pipelines, backtesting/research tooling, testing, automation</p>
+                        </div>
+                        <div class="card mini">
+                            <h3>Systems / DevOps</h3>
+                            <p>Docker Compose, service decomposition, CI/CD patterns, Cisco, Fortinet</p>
+                        </div>
+                        <div class="card mini">
+                            <h3>Java</h3>
+                            <p>OOP, Swing UI, persistence concepts, clean architecture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>About</h3>
+                    <p>
+                        I like building systems that are easy to reason about: clear interfaces, measurable performance,
+                        and reproducible outputs. Recently, that’s meant GPU-accelerated security ML, and DB-backed trading
+                        workflows (live + research).
+                    </p>
+                    <ul class="bullets">
+                        <li>Interests: low-latency inference, distributed services, quant research infrastructure</li>
+                        <li>Current focus: end-to-end trading pipelines and real-time network anomaly detection</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <div class="container">
+                <h2>Research</h2>
+                <p class="muted">
+                    Selected applied research areas and write-ups.
+                </p>
+
+                <div class="card">
+                    <h3>Real-Time DDoS Detection in NAT Environments</h3>
+                    <ul class="bullets">
+                        <li>Behavior-based anomaly detection (k-NN + OC-SVM) on rolling-window traffic features</li>
+                        <li>Microservice architecture for capture/analysis + state tracking</li>
+                        <li>GPU acceleration for throughput and reduced latency</li>
+                    </ul>
+
+                </div>
+
+                <div class="card" style="margin-top: 14px;">
+                    <h3>Quant Research Tooling</h3>
+                    <ul class="bullets">
+                        <li>Robust statistics for relative-value screening and ranking</li>
+                        <li>Deterministic backtesting workflows with clear data lineage</li>
+                        <li>Risk analytics: drawdowns, covariance, and portfolio-level evaluation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section alt">
+            <div class="container contact">
+                <div>
+                    <h2>Contact</h2>
+                    <p class="muted">Best way to reach me:</p>
+                    <ul class="meta">
+                        <li><span>Email</span><b>you@email.com</b></li>
+                        <li><span>GitHub</span><b>@YOUR_GITHUB</b></li>
+                        <li><span>LinkedIn</span><b>/in/YOUR_LINKEDIN</b></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Nikola Georgiev</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
