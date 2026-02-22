@@ -1,0 +1,191 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Home {% endblock title %}
+{% block content %}
+<style>
+    #myTable thead th,
+    #myTable tbody td {
+        color: white !important;
+    }
+
+    #myTable tbody tr:hover {
+        background-color: #495057 !important;
+    }
+
+    .dataTables_filter input {
+        color: white !important;
+        border: 1px solid #6c757d !important; /* Optional: Adds a border */
+    }
+
+    .dataTables_filter input::placeholder {
+        color: #adb5bd !important;
+    }
+
+
+</style>
+
+
+<div class="row">
+    <div class="col-xl-4 col-sm-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                            <h3 class="mb-0">{{acc_data['netliquidation']['amount']}}</h3>
+                            <p class="text-success ms-2 mb-0 font-weight-medium"></p>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="text-muted font-weight-normal">Total</h6>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-sm-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                            <h3 class="mb-0">{{acc_data['totalcashvalue']['amount']}}</h3>
+                            <p class="text-success ms-2 mb-0 font-weight-medium"></p>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="text-muted font-weight-normal">Cash</h6>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-sm-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-9">
+                        <div class="d-flex align-items-center align-self-start">
+                            <h3 class="mb-0">{{ acc_data['accruedcash']['amount'] }}</h3>
+                            <p class="text-danger ms-2 mb-0 font-weight-medium"></p>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="text-muted font-weight-normal">Total pnl</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="card mt-3">
+    <div class="card-body">
+        <div id="pos-table">
+            <table id="myTable" class="table table-striped" style="width:100%">
+                <thead>
+                <tr>
+                    <th>Contract ID</th>
+                    <th>Description</th>
+                    <th>Position</th>
+                    <th>Base Market Prc</th>
+                    <th>Market Price</th>
+                    <th>Market Value</th>
+                    <th>Unrealized Pnl</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+{% block javascripts %}
+
+<script>
+    $(document).ready(function () {
+
+        table = $('#myTable').DataTable({
+            "ajax": {
+                "url": "/positions", // Your data source URL
+                "dataSrc": "" // Leave empty if the API returns a direct array
+            },
+            "columns": [
+                {"data": "conid"},          // Contract ID
+                {"data": "contractDesc"},
+                {"data": "position"},       // Position
+                {"data": "avgPrice"},
+                {"data": "mktPrice"},
+                {"data": "mktValue"},     // Market Price
+                {"data": "unrealizedPnl"},
+                {
+                    "data": "contractDesc", // This will use the contractDesc to creaote the button
+                    "render": function (data, type, row) {
+                        var symbol = row.contractDesc;  // Use the contractDesc for symbol
+                        var url = "https://www.tradingview.com/symbols/" + symbol + "/";  // Create the TradingView URL
+                        return '<a href="' + url + '" target="_blank" class="btn btn-primary">View on TradingView</a>';  // Create button with link
+                    }
+                },
+                {
+                    "data": "conid",  // This will use the conid to create the Manage URL
+                    "render": function (data, type, row) {
+                        var conid = row.conid;  // Use the conid to generate the manage URL
+                        return '<a href="/manage" target="_blank" class="btn btn-danger">Manage</a>';  // Create button with link
+                    }
+                },
+                {
+                    "data": "conid",  // This will use the conid to create the Manage URL
+                    "render": function (data, type, row) {
+                        var conid = row.conid;  // Use the conid to generate the manage URL
+                        return '<a href="/orders" target="_blank" class="btn btn-danger">Orders</a>';  // Create button with link
+                    }
+                },
+                {
+                    "data": "conid",  // This will use the conid to create the Manage URL
+                    "render": function (data, type, row) {
+                        var conid = row.conid;  // Use the conid to generate the manage URL
+                        return '<a id="close-btn" class="btn btn-danger">Close</a>';  // Create button with link
+                    }
+                }
+
+            ],
+            "responsive": true,
+            "paging": true,
+            "searching": true, "scrollY": "400px",         // Vertical scroll height
+            "scrollX": true,
+            "scrollY": true,
+
+        });
+
+        $("#myTable").on('click', '.btn-danger', function(e) {
+
+            e.preventDefault();  // Prevent the default action (i.e., following the link)
+            var rowData = table.row($(this).closest('tr')).data();
+
+            $.ajax({
+                url: "/close-position",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    con_id: rowData.conid,
+                    ticker: rowData.contractDesc,
+                    qty: rowData.position
+                }),
+                success: function (response) {
+                    console.log("Success:", response);
+                    alert("Position closed successfully!");
+                    location.reload();
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error:", error);
+                    alert("Failed to close position.");
+                    location.reload();
+                }
+            });
+
+
+            alert("Clicked the close button");
+            console.log("Closed pos");
+        });
+    });
+</script>
+{% endblock javascripts %}

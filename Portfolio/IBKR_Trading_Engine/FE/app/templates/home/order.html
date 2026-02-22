@@ -1,0 +1,164 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Home {% endblock title %}
+{% block content %}
+<style>
+    /* Ensure all table text is white */
+    #data-table thead th,
+    #data-table tbody td,
+    #data-table_paginate,
+    #data-table_info,
+    #data-table_length label,
+    #data-table_filter label {
+        color: white !important;
+    }
+
+    /* Style for "Loading..." text */
+    .dataTables_processing {
+        color: white !important;
+    }
+
+    /* Ensure the search input is styled properly */
+    .dataTables_filter input {
+        color: white !important;
+        background-color: transparent !important;
+        border: 1px solid #6c757d !important;
+    }
+
+    .dataTables_filter input::placeholder {
+        color: #adb5bd !important;
+    }
+
+    /* Add hover effect */
+    #data-table tbody tr:hover {
+        background-color: #495057 !important;
+    }
+</style>
+
+
+<div class="card mt-3">
+    <div class="card-body">
+        <div class="mb-5">
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 d-flex gap-3">
+                    <button class="btn btn-danger btn-lg fw-bold" id="show-orders">
+                        Orders
+                    </button>
+                    <button class="btn btn-danger btn-lg fw-bold" id="show-trades">
+                        Trades
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="table-container">
+            <table id="data-table" class="table table-striped" style="width:100%">
+                <thead id="table-header"></thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block javascripts %}
+<script>
+    function loadTable(type) {
+        // Destroy previous DataTable instance if exists
+        if ($.fn.DataTable.isDataTable('#data-table')) {
+            $('#data-table').DataTable().destroy();
+            $('#data-table tbody').empty(); // Clear previous data
+        }
+
+        let endpoint = "";
+        let columns = [];
+
+        if (type === "orders") {
+            endpoint = "/get-all-active-orders";
+            columns = [
+                { title: "Order ID", data: "orderId" },
+                { title: "Symbol", data: "description1" },
+                { title: "Order Type", data: "origOrderType" },
+                { title: "Quantity", data: "filledQuantity" },
+                {
+                    title: "Price",
+                    data: (row) => row.avgPrice ?? row.price ?? "N/A"
+                },
+                { title: "Status", data: "status" }
+            ];
+        } else if (type === "trades") {
+            endpoint = "/get-all-trades";
+            columns = [
+                { title: "Symbol", data: "symbol" },
+                { title: "To Order", data: "order_ref" },
+                { title: "Trade Type", data: "side" },
+                { title: "Executed Quantity", data: "size" },
+                { title: "Price", data: "price" },
+                {
+                    title: "Timestamp US",
+                    data: "trade_time_r",
+                    render: function (data) {
+                        console.log(data);
+                        if (!data) return "N/A"; // Handle missing data
+
+                        let date = new Date(data); // Convert Unix timestamp (ms) to Date
+
+                        if (isNaN(date.getTime())) return "Invalid Date"; // Handle errors
+
+                        // Format: YYYY-MM-DD HH:mm:ss (24-hour format)
+                        return date.toLocaleString("en-US", {
+                            year: "numeric",
+                            month: "2-digit",
+                            day: "2-digit",
+                            hour: "2-digit",
+                            minute: "2-digit",
+                            second: "2-digit",
+                            timeZone:  "America/New_York",
+                            hour12: false // Ensures 24-hour format
+                        });
+                    }
+                }            ];
+        }
+
+        // Update table headers dynamically
+        let tableHeader = "<tr>";
+        columns.forEach(col => {
+            tableHeader += `<th>${col.title}</th>`;
+        });
+        tableHeader += "</tr>";
+        $("#table-header").html(tableHeader);
+
+        // Initialize DataTable with the correct columns and endpoint
+        $('#data-table').DataTable({
+            "ajax": {
+                "url": endpoint,
+                "dataSrc": ""
+            },
+            "columns": columns,
+            "responsive": true,
+            "paging": true,
+            "searching": true,
+            "scrollY": "400px",
+            "scrollX": true,
+            "language": {
+                "processing": "<span style='color:white;'>Loading...</span>" // White loading text
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        // Load orders by default
+        loadTable("orders");
+
+        // Button click event handlers
+        $('#show-orders').on('click', function () {
+            loadTable("orders");
+        });
+
+        $('#show-trades').on('click', function () {
+            loadTable("trades");
+        });
+    });
+</script>
+{% endblock javascripts %}

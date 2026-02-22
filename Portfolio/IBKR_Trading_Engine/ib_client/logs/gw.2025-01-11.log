@@ -1,0 +1,1036 @@
+12:51:29.823 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+ccp: false
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+12:51:30.018 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+12:51:30.042 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: a27ed42161ad96c53e715ca5c5e3e3fa4cff5262 Mon, 24 Apr 2023 15:41:53 -0400
+12:51:30.042 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 20.0.1
+12:52:19.396 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:19.397 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:19.546 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:20.527 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Login?forwardTo=22&RL=1&ip2loc=US,200|659ms
+12:52:20.528 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [partnerID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;HttpOnly;SameSite=None, XYZAB_AM.LOGIN=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, XYZAB=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, USERID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, partnerID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;HttpOnly;SameSite=None, URL_PARAM="forwardTo=22&RL=1&ip2loc=US"; Version=1; Domain=.ibkr.com; Path=/;Secure, JSESSIONID=4A3CCFEF061E773B229AE5F2992402EB.ny5wwwdam1-internet; Path=/sso; HttpOnly;Secure;SameSite=None, x-sess-uuid=0.46f51602.1736592366.a2fd6c5; secure; HttpOnly]
+12:52:20.530 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [partnerID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;HttpOnly;SameSite=None, XYZAB_AM.LOGIN=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, XYZAB=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, USERID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, partnerID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;HttpOnly;SameSite=None, URL_PARAM="forwardTo=22&RL=1&ip2loc=US"; Version=1; Domain=.ibkr.com; Path=/;Secure, JSESSIONID=4A3CCFEF061E773B229AE5F2992402EB.ny5wwwdam1-internet; Path=/sso; HttpOnly;Secure;SameSite=None, x-sess-uuid=0.46f51602.1736592366.a2fd6c5; secure; HttpOnly] -> 
+12:52:20.775 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/fontawesome-6.2.0/all.min.css,200|173ms
+12:52:20.912 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:20.912 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:20.915 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:20.915 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:20.977 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/bootstrap-5.2.2/bootstrap.min.css,200|392ms
+12:52:21.203 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/ibkr/theme-ibkr-portal.min.css,200|139ms
+12:52:21.219 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:21.223 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:21.341 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/jquery-3.7.0/jquery.min.js,200|112ms
+12:52:21.387 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/css/footer.css,200|160ms
+12:52:21.390 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592367.a2fdd80; secure; HttpOnly]
+12:52:21.390 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592367.a2fdd80; secure; HttpOnly] -> 
+12:52:21.405 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/reg-am/login.min.css,200|185ms
+12:52:21.448 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js,200|73ms
+12:52:21.496 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/lib/xyz.bundle.min.js,200|104ms
+12:52:21.496 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592367.a2fde00; secure; HttpOnly]
+12:52:21.496 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592367.a2fde00; secure; HttpOnly] -> 
+12:52:21.523 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:21.952 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/bootstrap-switch-3.3.2/bootstrap-switch.min.css,200|1119ms
+12:52:22.594 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /images/common/logos/ibkr/interactive-brokers.svg,200|49ms
+12:52:22.619 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/proxima-nova/Proxima-Nova-Regular.woff2,200|51ms
+12:52:22.687 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/fontawesome-6.2.0/webfonts/fa-brands-400.woff2,200|117ms
+12:52:22.689 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2,200|118ms
+12:52:22.743 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /portal.proxy/v1/gstat/bulletins,204|131ms
+12:52:22.750 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/proxima-nova/Proxima-Nova-Semibold.woff2,200|125ms
+12:52:22.788 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/proxima-nova/Proxima-Nova-Light.woff2,200|215ms
+12:52:22.836 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/images/2fa-animated-once.gif,200|79ms
+12:52:22.836 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592369.a2fe5e2; secure; HttpOnly]
+12:52:22.837 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592369.a2fe5e2; secure; HttpOnly] -> 
+12:52:22.925 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:52:33.998 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Authenticator,200|300ms
+12:52:33.998 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592380.a2fe5e6; secure; HttpOnly]
+12:52:33.999 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592380.a2fe5e6; secure; HttpOnly] -> 
+12:52:34.311 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Authenticator,200|282ms
+12:52:34.312 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [web=1317039141; Domain=.ibkr.com; Expires=Sun, 11 Jan 2026 10:46:20 GMT; Path=/; Secure;Secure;SameSite=None, x-sess-uuid=0.7ff51602.1736592380.519ab03; secure; HttpOnly]
+12:52:34.313 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [web=1317039141; Domain=.ibkr.com; Expires=Sun, 11 Jan 2026 10:46:20 GMT; Path=/; Secure;Secure;SameSite=None, x-sess-uuid=0.7ff51602.1736592380.519ab03; secure; HttpOnly] -> 
+12:52:34.600 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Authenticator,200|279ms
+12:52:34.601 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592380.a2fe556; secure; HttpOnly]
+12:52:34.601 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592380.a2fe556; secure; HttpOnly] -> 
+12:53:01.323 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Authenticator,200|485ms
+12:53:01.324 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.7ff51602.1736592407.519aa89; secure; HttpOnly]
+12:53:01.324 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.7ff51602.1736592407.519aa89; secure; HttpOnly] -> 
+12:53:01.776 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Dispatcher,200|419ms
+12:53:01.779 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [USERID=142198073; Domain=.ibkr.com; Path=/;Secure;SameSite=None, x-sess-uuid=0.46f51602.1736592407.a2fe676; secure; HttpOnly]
+12:53:01.779 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [USERID=142198073; Domain=.ibkr.com; Path=/;Secure;SameSite=None, x-sess-uuid=0.46f51602.1736592407.a2fe676; secure; HttpOnly] -> 
+12:53:01.920 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/bootstrap-5.2.2/bootstrap.min.css,200|115ms
+12:53:01.948 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/ibkr/theme-ibkr-portal.min.css,200|130ms
+12:53:01.965 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/fontawesome-6.2.0/all.min.css,200|150ms
+12:53:02.018 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/reg-am/login.min.css,200|201ms
+12:53:02.118 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:53:02.119 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+12:53:02.142 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/css/footer.css,200|119ms
+12:53:02.142 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592408.a30c0c4; secure; HttpOnly]
+12:53:02.142 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592408.a30c0c4; secure; HttpOnly] -> 
+12:53:02.153 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/jquery-3.7.0/jquery.min.js,200|65ms
+12:53:02.245 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/lib/reg2fa.bundle.min.js,200|101ms
+12:53:02.245 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592408.a30c1a5; secure; HttpOnly]
+12:53:02.245 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592408.a30c1a5; secure; HttpOnly] -> 
+12:53:02.345 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/lib/js.cookie.min.js,200|230ms
+12:53:02.345 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.7ff51602.1736592408.51a6f50; secure; HttpOnly]
+12:53:02.345 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.7ff51602.1736592408.51a6f50; secure; HttpOnly] -> 
+12:53:03.191 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /images/common/logos/ibkr/interactive-brokers.svg,200|46ms
+12:53:03.199 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/fontawesome-6.2.0/webfonts/fa-brands-400.woff2,200|48ms
+12:53:03.239 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/proxima-nova/Proxima-Nova-Light.woff2,200|88ms
+12:53:03.266 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2,200|114ms
+12:53:03.306 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/proxima-nova/Proxima-Nova-Regular.woff2,200|156ms
+12:53:03.392 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/report,200|227ms
+12:53:03.392 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592409.a30c9b5; secure; HttpOnly]
+12:53:03.392 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592409.a30c9b5; secure; HttpOnly] -> 
+12:53:03.565 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/qr-codes?ACTION=GET_REG_OPTIONS,200|372ms
+12:53:03.565 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.7ff51602.1736592409.51a762f; secure; HttpOnly]
+12:53:03.566 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.7ff51602.1736592409.51a762f; secure; HttpOnly] -> 
+12:53:04.042 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/qr-codes?ACTION=GENERATE,200|458ms
+12:53:04.042 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592410.a30c9bd; secure; HttpOnly]
+12:53:04.043 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592410.a30c9bd; secure; HttpOnly] -> 
+12:53:14.018 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Dispatcher,302|501ms
+12:53:14.019 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [USERID=142198073; Domain=.ibkr.com; Path=/;Secure;SameSite=None, x-sess-uuid=0.7ff51602.1736592420.51a7671; secure; HttpOnly]
+12:53:14.019 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [USERID=142198073; Domain=.ibkr.com; Path=/;Secure;SameSite=None, x-sess-uuid=0.7ff51602.1736592420.51a7671; secure; HttpOnly] -> 
+12:53:14.021 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     : Client login succeeds
+12:53:14.054 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Authenticator?ACTION=CHECK_IBKEY_REGISTERED,200|466ms
+12:53:14.054 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736592420.a30c9d1; secure; HttpOnly]
+12:53:14.054 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736592420.a30c9d1; secure; HttpOnly] -> 
+12:53:14.479 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/sso/validate?gw=1,200|456ms
+12:53:14.481 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : portal validate response: {"SFT":"4.2","IS_PENDING_APPLICANT":true,"SF_ENABLED":true,"HARDWARE_INFO":"","UNIQUE_LOGIN_ID":"142198073-1736592407560","AUTH_TIME":1736592407592,"SF_CONFIG":"4.2","USER_NAME":"jezxcc137","CREDENTIAL_TYPE":5,"IS_FREE_TRIAL":false,"LOGIN_TYPE":1,"LANDING_APP":"UNIVERSAL","CREDENTIAL":"mangizite","ANOMALOUS_LOGIN":false,"RESULT":true,"QUALIFIED_FOR_MOBILE_AUTH":"IBKEY","IP":"130.204.91.35","USER_ID":142198073,"EXPIRES":1736592420963,"TOKEN":"20b96074b20530dfd568769911d9c76a8a99ef77","took":307,"IS_MASTER":false,"features":{"env":"PROD","wlms":true,"realtime":true,"bond":true,"optionChains":true,"calendar":true,"newMf":true},"region":"EU"}
+12:53:14.619 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     : authenticated to cp
+12:53:14.620 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : cancel timer SsoService 0
+12:53:14.620 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : start timer 300000 SsoService
+12:53:14.622 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : forward event ON_SSO_VALIDATION, payload 142198073
+12:53:14.839 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/one/user,200|219ms
+12:53:14.840 INFO  vert.x-eventloop-thread-0 ClientPortalService  : get user reply {"username":"jezxcc137","features":{"env":"PROD","wlms":true,"realtime":true,"bond":true,"optionChains":true,"calendar":true,"newMf":true},"wbId":"","uar":{"portfolioAnalyst":true,"userInfo":true,"messageCenter":true,"accountDetails":true,"tradingRestrictions":false,"tws":true,"fyi":true,"voting":true,"forum":true,"recentTransactions":true},"props":{"isIBAMClient":false,"ReadOnlySession":null},"accts":{"U17112643":{"isIBAMClient":false,"clearingStatus":"P","openDate":1736290800000,"isFAClient":false,"isFunded":false,"tradingPermissions":["WAR","STK","CASH"]}},"hasBrokerageAccessInd":false,"fa":false,"has2fa":false,"islite":false,"ispaper":false,"applicants":[{"id":18019074,"type":"INDIVIDUAL","businessType":"INDEPENDENT","nlcode":"en_US","legalCountry":{"name":"Bulgaria","alpha3":"BGR"}}]}
+12:53:16.223 INFO  vert.x-eventloop-thread-0 SsoService           : sso init status=200, url=https://api.ibkr.com/v1/api/ssodh/init
+12:53:16.343 DEBUG vert.x-eventloop-thread-0 SsoService           : K 52c637ea73d1834cf0584611e5e4df6628265974
+12:53:16.344 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : forward event ON_SSODH_COMPLETED, payload none
+12:53:16.344 DEBUG vert.x-eventloop-thread-0 GatewayHttpProxy     : delaying authentication for 3000
+12:53:16.375 INFO  vert.x-eventloop-thread-0 TstTokenUtils        : Current MAC address : 00-15-5D-C6-47-34
+12:53:16.376 DEBUG vert.x-eventloop-thread-0 SsoService           : tst token generated: 1ed51160934a0ccaae6ec6ba69c2189b56206ebe
+12:53:16.645 INFO  vert.x-eventloop-thread-0 SsoService           : publish tst token status=200, url=https://api.ibkr.com/sso/Authenticator?ACTION=PUBLISH_TST&RESP_TYPE=JSON&DEVICE_ID=3deb5fdd|00-15-5D-C6-47-34
+12:53:16.646 DEBUG vert.x-eventloop-thread-0 SsoService           : publish tst token reply:
+{"error":"Can't PUBLISH_TST for user"}
+12:53:17.378 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/one/user,200|657ms
+12:53:19.447 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /v1/api/iserver/auth/status,200|97ms
+12:53:19.447 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : status {"authenticated":false,"competing":false,"connected":false,"MAC":"5C:BA:2C:15:8E:B0"}
+12:53:19.447 INFO  vert.x-eventloop-thread-0 ClientPortalService  : process auth status {"authenticated":false,"competing":false,"connected":false,"MAC":"5C:BA:2C:15:8E:B0"}
+12:53:19.473 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : auth brokerage, k=52c637ea73d1834cf0584611e5e4df6628265974, post={"username":"jezxcc137","machineId":"2eda0f9b","compete":true}
+12:53:21.452 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> POST https://api.ibkr.com/v1/api/iserver/auth/ssodh/init,200|1979ms
+12:53:21.452 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : iserver init : {"passed":false,"authenticated":false,"connected":true,"competing":false}
+12:53:21.455 WARN  vert.x-eventloop-thread-0 BaseServiceProxy     : failed https://api.ibkr.com/v1/api/iserver/auth/ssodh/init | reason java.lang.NullPointerException: Cannot invoke "String.length()" because "val" is null
+12:53:21.455 DEBUG vert.x-eventloop-thread-0 ClientPortalService  : iserver init : null
+12:53:21.455 ERROR vert.x-eventloop-thread-0 ClientPortalService  : iserver init failed
+io.vertx.core.impl.NoStackTraceThrowable: java.lang.NullPointerException: Cannot invoke "String.length()" because "val" is null
+12:53:21.455 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : forward event ON_SSODH_FAILED, payload none
+12:53:21.455 ERROR vert.x-eventloop-thread-0 GatewayHttpProxy     : ssodh failed, retry with /iserver/reauthenticate
+13:19:01.929 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+ccp: false
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+13:19:02.078 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+13:19:02.095 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: a27ed42161ad96c53e715ca5c5e3e3fa4cff5262 Mon, 24 Apr 2023 15:41:53 -0400
+13:19:02.095 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 20.0.1
+13:29:22.367 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+ccp: false
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+13:29:22.477 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+13:29:22.495 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: a27ed42161ad96c53e715ca5c5e3e3fa4cff5262 Mon, 24 Apr 2023 15:41:53 -0400
+13:29:22.496 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 20.0.1
+13:56:57.765 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+ccp: false
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+13:56:57.925 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+13:56:57.947 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: a27ed42161ad96c53e715ca5c5e3e3fa4cff5262 Mon, 24 Apr 2023 15:41:53 -0400
+13:56:57.947 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 20.0.1
+13:57:01.120 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+13:57:01.122 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+13:57:01.269 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+13:57:02.167 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/Login?forwardTo=22&RL=1&ip2loc=US,200|644ms
+13:57:02.168 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [partnerID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;HttpOnly;SameSite=None, XYZAB_AM.LOGIN=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, XYZAB=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, USERID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, partnerID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;HttpOnly;SameSite=None, URL_PARAM="forwardTo=22&RL=1&ip2loc=US"; Version=1; Domain=.ibkr.com; Path=/;Secure, JSESSIONID=4F4A3DA464FE280ECE78FFF01F269DA0.ny5wwwdam1-internet; Path=/sso; HttpOnly;Secure;SameSite=None, x-sess-uuid=0.46f51602.1736596248.a84038f; secure; HttpOnly]
+13:57:02.169 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [partnerID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;HttpOnly;SameSite=None, XYZAB_AM.LOGIN=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, XYZAB=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, USERID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;SameSite=None, partnerID=""; Domain=.ibkr.com; Expires=Thu, 01 Jan 1970 00:00:10 GMT; Path=/;Secure;HttpOnly;SameSite=None, URL_PARAM="forwardTo=22&RL=1&ip2loc=US"; Version=1; Domain=.ibkr.com; Path=/;Secure, JSESSIONID=4F4A3DA464FE280ECE78FFF01F269DA0.ny5wwwdam1-internet; Path=/sso; HttpOnly;Secure;SameSite=None, x-sess-uuid=0.46f51602.1736596248.a84038f; secure; HttpOnly] -> 
+13:57:02.364 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/bootstrap-5.2.2/bootstrap.min.css,200|164ms
+13:57:02.415 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/fontawesome-6.2.0/all.min.css,200|211ms
+13:57:02.521 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+13:57:02.524 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+13:57:02.526 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+13:57:02.526 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+13:57:02.562 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/bootstrap-switch-3.3.2/bootstrap-switch.min.css,200|111ms
+13:57:02.632 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/reg-am/login.min.css,200|143ms
+13:57:02.675 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /css/ibkr/theme-ibkr-portal.min.css,200|111ms
+13:57:02.831 WARN  vert.x-eventloop-thread-0 DefaultChannelPipeline : An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+io.netty.handler.codec.DecoderException: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:459)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:265)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:340)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1359)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:362)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:348)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:935)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:134)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:645)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:545)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:499)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:858)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: certificate_unknown
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLEngineImpl.decode(SSLEngineImpl.java:736)
+	at java.base/sun.security.ssl.SSLEngineImpl.readRecord(SSLEngineImpl.java:691)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:506)
+	at java.base/sun.security.ssl.SSLEngineImpl.unwrap(SSLEngineImpl.java:482)
+	at java.base/javax.net.ssl.SSLEngine.unwrap(SSLEngine.java:679)
+	at io.netty.handler.ssl.SslHandler$SslEngineType$3.unwrap(SslHandler.java:281)
+	at io.netty.handler.ssl.SslHandler.unwrap(SslHandler.java:1215)
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1127)
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1162)
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:489)
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:428)
+	... 15 common frames omitted
+13:57:02.941 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/css/footer.css,200|214ms
+13:57:02.941 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736596249.a84095c; secure; HttpOnly]
+13:57:02.941 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736596249.a84095c; secure; HttpOnly] -> 
+13:57:03.157 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/lib/xyz.bundle.min.js,200|322ms
+13:57:03.157 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.46f51602.1736596249.a840b93; secure; HttpOnly]
+13:57:03.157 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.46f51602.1736596249.a840b93; secure; HttpOnly] -> 
+13:57:03.179 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/jquery-3.7.0/jquery.min.js,200|351ms
+13:57:03.289 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js,200|459ms
+13:57:03.668 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /images/common/logos/ibkr/interactive-brokers.svg,200|47ms
+13:57:03.712 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/proxima-nova/Proxima-Nova-Light.woff2,200|66ms
+13:57:03.715 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/fontawesome-6.2.0/webfonts/fa-brands-400.woff2,200|70ms
+13:57:03.748 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/fontawesome-6.4.2/webfonts/fa-solid-900.woff2,200|100ms
+13:57:03.828 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/proxima-nova/Proxima-Nova-Regular.woff2,200|185ms
+13:57:03.853 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /sso/images/2fa-animated-once.gif,200|166ms
+13:57:03.854 INFO  vert.x-eventloop-thread-0 CookieManager        : set cookies [x-sess-uuid=0.7ff51602.1736596250.56906a6; secure; HttpOnly]
+13:57:03.854 DEBUG vert.x-eventloop-thread-0 BaseServiceProxy     : Remapping Set-cookies [x-sess-uuid=0.7ff51602.1736596250.56906a6; secure; HttpOnly] -> 
+13:57:03.892 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/proxima-nova/Proxima-Nova-Semibold.woff2,200|173ms
+13:57:03.999 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /portal.proxy/v1/gstat/bulletins,200|315ms
+13:57:04.069 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /fonts/proxima-nova/proximanova-extrabold.woff2,200|50ms
+13:57:04.132 INFO  vert.x-eventloop-thread-0 BaseServiceProxy     : -> GET /images/web/favicons/home-screen-icon-128x128.png,200|41ms
+13:57:23.140 INFO  main GatewayStart         : config conf.yaml !!ibgroup.web.core.clientportal.gw.Config
+authDelay: 3000
+ccp: false
+cors: {origin.allowed: '*', allowCredentials: false}
+ip2loc: US
+ips:
+  allow: [192.*, 131.216.*, 127.0.0.1]
+  deny: [212.90.324.10]
+listenPort: 5000
+listenSsl: true
+portalBaseURL: ''
+proxyRemoteHost: https://api.ibkr.com
+proxyRemoteSsl: true
+sslCert: vertx.jks
+sslPwd: mywebapi
+ssoPing: 5
+svcEnvironment: v1
+tst: false
+twsBaseURL: /tws.proxy
+webApps:
+- {cache: true, index: index.html, listing: false, name: demo, proxy: ''}
+
+13:57:23.247 INFO  vert.x-eventloop-thread-0 GatewayHttpProxy     :  -> mount demo on /demo
+13:57:23.266 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : version: a27ed42161ad96c53e715ca5c5e3e3fa4cff5262 Mon, 24 Apr 2023 15:41:53 -0400
+13:57:23.266 INFO  vert.x-eventloop-thread-0 GatewayVerticle      : Java Version: 20.0.1

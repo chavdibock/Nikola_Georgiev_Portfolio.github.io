@@ -1,0 +1,59 @@
+  [
+    {
+      'ask': 6.99,
+      'bid': 6.98,
+      'avg_volume': 38100000.0,
+      'volume': 266087500.0,
+      'change_prc': 28.26,
+      'con_id': 530965695,
+      'change': [3.6, 2.0, 2.5 ]
+    },
+    {
+      'ask': 9.3,
+      'bid': 9.28,
+      'avg_volume': 1580000.0,
+      'volume': 11120100.0,
+      'change_prc': 12.86,
+      'con_id': 581444969
+    },
+    {
+      'ask': 2.1,
+      'bid': 2.04,
+      'avg_volume': 1340000.0,
+      'volume': 5011400.0,
+      'change_prc': 6.25,
+      'con_id': 308077703
+    },
+    {
+      'ask': 2.44,
+      'bid': 2.35,
+      'avg_volume': 2130000.0,
+      'volume': 7685700.0,
+      'change_prc': 7.11,
+      'con_id': 497219617
+    },
+    {
+      'ask': 7.0,
+      'bid': 6.85,
+      'avg_volume': 526000.0,
+      'volume': 1600200.0,
+      'change_prc': 3.01,
+      'con_id': 6608326
+    },
+    {
+      'ask': 10.99,
+      'bid': 10.79,
+      'avg_volume': 286000.0,
+      'volume': 908700.0,
+      'change_prc': 6.36,
+      'con_id': 467746552
+    },
+    {
+      'ask': 11.01,
+      'bid': 11.0,
+      'avg_volume': 4810000.0,
+      'volume': 15286300.0,
+      'change_prc': 4.36,
+      'con_id': 40773257
+    }
+  ]

@@ -1,0 +1,6 @@
+selenium==4.27.1
+requests==2.32.3
+slack-sdk==3.34.0
+twilio==9.4.2
+webdriver-manager
+python-dotenv

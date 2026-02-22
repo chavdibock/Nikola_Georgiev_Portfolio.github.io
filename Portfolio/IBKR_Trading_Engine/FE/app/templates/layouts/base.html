@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>
+        October - 29 {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/vendor.bundle.base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/datatables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    <link rel="shortcut icon" href="../assets/images/logo.png"/>
+    <!-- Specific Page CSS goes HERE -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+    <!-- ✅ Add Bootstrap & DataTables JavaScript -->
+
+    {% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+
+<body class>
+<div id='loader'>
+    <div class="spinner"></div>
+</div>
+
+<script>
+    window.addEventListener('load', function load() {
+      const loader = document.getElementById('loader');
+      setTimeout(function () {
+        loader.classList.add('fadeOut');
+      }, 300);
+    });
+
+
+</script>
+
+<!-- @App Content -->
+<!-- =================================================== -->
+<div class="container-scroller">
+
+    {% include 'includes/sidebar.html' %}
+    <div class="container-fluid page-body-wrapper">
+
+        {% include 'includes/navbar.html' %}
+        <!-- partial -->
+
+        <div class="main-panel">
+            <div class="content-wrapper">
+                {% block content %}{% endblock content %}
+            </div>
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- {% include 'includes/footer.html' %} -->
+<!-- #Main ============================ -->
+
+{% include 'includes/scripts.html' %}
+
+<!-- Specific Page JS goes HERE -->
+{% block javascripts %}
+{% endblock javascripts %}
+
+</body>
+
+</html>

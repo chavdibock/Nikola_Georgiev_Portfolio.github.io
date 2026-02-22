@@ -1,0 +1,47 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <div class="text-center logo">
+        <a href="/home">
+            <img src="{{ url_for('static', path='/images/logo.png') }}" alt="logo" style="max-height: 100px; width: 70px;">
+        </a>
+    </div>
+
+    <ul class="nav">
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/orders">
+                <span class="menu-icon">
+                    <i class="mdi mdi-alarm-light"></i>
+                </span>
+                <span class="menu-title">Orders</span>
+            </a>
+        </li>
+
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/screener">
+                <span class="menu-icon">
+                    <i class="mdi mdi-alarm-light"></i>
+                </span>
+                <span class="menu-title">Screener</span>
+            </a>
+        </li>
+
+
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-bs-toggle="collapse" href="#reports-dropdown" aria-expanded="false"
+               aria-controls="reports-dropdown">
+                <span class="menu-icon">
+                    <i class="mdi mdi-laptop"></i>
+                </span>
+                <span class="menu-title">Reports</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="reports-dropdown">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                </ul>
+            </div>
+        </li>
+
+    </ul>
+</nav>

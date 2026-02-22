@@ -1,0 +1,56 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Home {% endblock title %}
+{% block content %}
+
+<div class="card">
+    <div class="card-body">
+        <h2 class="mb-4">Sample Form</h2>
+        <form action="/submit" method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age" name="age">
+            </div>
+
+            <div class="mb-3">
+                <label for="male" class="form-label">Gender</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="female" class="form-label">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="other" class="form-label">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other" class="form-label">Other</label>
+            </div>
+
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country" name="country">
+                    <option value="USA">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="subscribe" class="form-label">Subscribe to Newsletter</label><br>
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                <label for="subscribe" class="form-label">Yes, I would like to receive newsletters.</label>
+            </div>
+
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+{% block javascripts %}
+
+{% endblock javascripts %}

@@ -1,0 +1,26 @@
+<nav class="navbar p-0 fixed-top d-flex flex-row">
+    <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+        <a href="/"><img href="home/new.html"><img src="{{ url_for('static', path='/images/favicon.png') }}" alt="logo"/></img></a>
+    </div>
+
+
+    <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+        </button>
+        <ul class="navbar-nav navbar-nav-right">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+                    <div class="navbar-profile">
+                        <p class="mb-0 d-none d-sm-block display-5">Welcome, <strong>Trader</strong></p>
+                        <button class="btn btn-inverse-light ms-2" id="logout-btn"> Logout</button>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-format-line-spacing"></span>
+        </button>
+    </div>
+</nav>

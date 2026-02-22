@@ -1,0 +1,78 @@
+services:
+
+
+  client:
+    build: ./ib_client
+    ports:
+      - 5000:5000
+    environment:
+      - TRADING_ENV=PAPER
+      - PARTNER=NIKOLA
+  #  healthcheck:
+  #    interval: 60s
+  #    timeout: 10s
+  #    retries: 3
+
+  # strategy:
+  #   build: ./strategy_vwap_macd
+  #   environment:
+  #     - ENV=CLOUD
+  #     - PARTNER=NIKOLA
+  #     - TRADING_ENV=PAPER
+  #     - DB_HOST=CLOUD
+  #     - DB_ENV=DEV
+  #     - STOP_LOSS=0.03
+  #     - TAKE_PROFIT=0.04
+
+  # strategy_2:
+  #   build: ./strategy_vwap_macd
+  #   environment:
+  #     - ENV=CLOUD
+  #     - PARTNER=NIKOLA
+  #     - TRADING_ENV=PAPER
+  #     - DB_HOST=CLOUD
+  #     - DB_ENV=DEV
+  #     - STOP_LOSS=0.04
+  #     - TAKE_PROFIT=0.06
+
+  # scanner:
+  #   build: ./screener
+  #   environment:
+  #     - PARTNER=NIKOLA
+  #     - DB_HOST=CLOUD
+  #     - DB_ENV=DEV
+  #     - ENV=CLOUD
+  scanner_2:
+    build: ./screener
+    environment:
+      - PARTNER=NIKOLA
+      - DB_HOST=LOCAL
+      - DB_ENV=DEV
+      - ENV=DB_DATABASE_LOCAL
+      - PERIOD=2d
+      - BARS_SIZE=1min
+      - CALC_VWAP_WINDOW=60
+      - MOVING_AVG_WINDOW=20
+      - MACD_LEN=20
+      - MACD_FAST=12
+      - MACD_SLOW=26
+      - CALC_ST_LOSS=20
+
+  front-end:
+    build: ./FE
+    ports:
+      - 9001:8000
+    image: ibkr-frond-end
+    environment:
+      - ENV=LOCAL
+      - PARTNER=NIKOLA
+      - BE_ENV=DOCKER
+  # back-end:
+  #   build: ./BE
+  #   ports:
+  #     - 9002:8000
+  #   environment:
+  #     - ENV=CLOUD
+  #     - DB_ENV=LOCAL
+  #     - DB_HOST=LOCAL
+  #     - PARTNER=NIKOLA

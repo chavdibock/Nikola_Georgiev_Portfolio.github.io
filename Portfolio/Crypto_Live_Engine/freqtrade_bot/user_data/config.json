@@ -1,0 +1,38 @@
+{
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "max_open_trades": 5,
+    "stake_currency": "USDT",
+    "exchange": {
+        "name": "binance",
+        "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "SOL/USDT"
+        ]
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "jwt_secret_key": "supersecret",
+        "CORS_origins": ["*"]
+    },
+    "signals": {
+        "enabled": true,
+        "pairs": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "SOL/USDT"
+        ]
+    },
+    "order_types": {
+        "entry": "market",
+        "exit": "market"
+    },
+    "force_entry_enable": true,
+    "stoploss": -0.10,
+    "minimal_roi": {
+        "0": 0.03
+    }
+}

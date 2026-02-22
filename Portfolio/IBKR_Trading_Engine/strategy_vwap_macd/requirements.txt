@@ -1,0 +1,11 @@
+selenium==4.27.1
+requests==2.32.3
+slack-sdk==3.34.0
+webdriver-manager
+python-dotenv
+websocket-client
+numpy
+tradingview-screener
+sqlalchemy
+pymysql
+pandas

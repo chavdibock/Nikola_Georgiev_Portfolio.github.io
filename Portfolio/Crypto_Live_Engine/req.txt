@@ -1,0 +1,5 @@
+websockets
+numpy
+requests
+pandas
+apscheduler
