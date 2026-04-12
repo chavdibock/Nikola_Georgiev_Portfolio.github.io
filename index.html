@@ -5,24 +5,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
-        content="Portfolio — projects in ML, trading systems, C++/Python/Java OOP, and research." />
-    <title>Your Name — Portfolio</title>
+        content="Nikola Georgiev — projects in GPU-accelerated ML for security, algorithmic trading microservices, and quant research tooling." />
+    <title>Nikola Georgiev — Portfolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <!-- ── HEADER ──────────────────────────────────────────────── -->
     <header class="site-header">
         <div class="container header-inner">
             <div class="brand">
                 <div class="hero-copy">
-
                     <div class="profile-wrapper">
-                        <img src="images/prof_picture.png" alt="Your Name" class="profile-img-large">
+                        <img src="images/prof_picture.png" alt="Nikola Georgiev" class="profile-img-large">
                     </div>
                     <div>
-                        <h1>Your Name</h1>
-                        <p class="subtitle">ML • Quant/Trading Systems • C++ • Research</p>
+                        <h1>Nikola Georgiev</h1>
+                        <p class="subtitle">GPU ML · Security Systems · Algo Trading · Microservices</p>
                     </div>
                 </div>
 
@@ -33,29 +35,65 @@
                     <a href="#contact">Contact</a>
                 </nav>
             </div>
+        </div>
     </header>
 
+    <!-- ── SYSTEM STATUS BAR ───────────────────────────────────── -->
+    <div class="sys-bar" aria-label="System status">
+        <div class="container sys-bar-inner">
+            <div class="sys-item">
+                <span class="sys-dot" aria-hidden="true"></span>
+                <span class="sys-key">Languages</span>
+                <span class="sys-val">C++17 · Python 3.11 · CUDA · Java</span>
+            </div>
+            <div class="sys-sep" aria-hidden="true"></div>
+            <div class="sys-item">
+                <span class="sys-dot amber" aria-hidden="true"></span>
+                <span class="sys-key">Tools</span>
+                <span class="sys-val">Docker · MySQL · FastAPI · pybind11</span>
+            </div>
+            <div class="sys-sep" aria-hidden="true"></div>
+            <div class="sys-item">
+                <span class="sys-dot violet" aria-hidden="true"></span>
+                <span class="sys-key">Academic Focus</span>
+                <span class="sys-val">AI Security · Quant Research</span>
+            </div>
+            <div class="sys-item sys-time">
+                <span class="sys-key">Status</span>
+                <span class="sys-val sys-online">● ONLINE</span>
+            </div>
+        </div>
+    </div>
+
     <main>
+        <!-- ── HERO ──────────────────────────────────────────────── -->
         <section class="hero">
             <div class="container hero-inner">
                 <div class="hero-copy">
-                    <h2>Building fast ML systems and trading engines.</h2>
+                    <h2>Building high-performance <span class="gradient-text">ML + trading systems.</span></h2>
                     <p>
-                        I work on real-time ML, backtesting/live trading systems, and performance-focused C++ projects.
-                        Here are selected projects and research areas.
+                        I build real-time anomaly detection pipelines, containerized trading infrastructure, and
+                        research-grade backtesting/analytics tooling. Below are selected projects with a focus on
+                        performance, reliability, and reproducibility.
                     </p>
 
                     <div class="cta-row">
                         <a class="btn primary" href="#projects">View Projects</a>
-                        <a class="btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
-                        <a class="btn" href="YOUR_RESUME_LINK" target="_blank" rel="noreferrer">Resume</a>
+                        <a class="btn" href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io"
+                            target="_blank" rel="noreferrer">GitHub</a>
+                        <a class="btn"
+                            href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/blob/main/Documents/Personal/NIKOLA_GEORGIEV_CV.pdf"
+                            target="_blank" rel="noreferrer">Resume</a>
+                        <a class="btn"
+                            href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/blob/main/Documents/Senior_Thesis/Nikola_Georgiev_COS_SP.pdf"
+                            target="_blank" rel="noreferrer">Seniour Thesis</a>
                     </div>
 
                     <div class="pill-row" aria-label="Highlights">
-                        <span class="pill">C++ (GPU)</span>
-                        <span class="pill">ML (KNN, OC-SVM)</span>
-                        <span class="pill">Backtesting</span>
-                        <span class="pill">MLOps</span>
+                        <span class="pill">C++17 / CUDA</span>
+                        <span class="pill">FastAPI Microservices</span>
+                        <span class="pill">MySQL-driven Systems</span>
+                        <span class="pill">Backtesting / Research</span>
                     </div>
                 </div>
 
@@ -63,18 +101,19 @@
                     <div class="card">
                         <h3>Quick Info</h3>
                         <ul class="meta">
-                            <li><span>Location</span><b>Your City</b></li>
-                            <li><span>Focus</span><b>ML + Trading Systems</b></li>
+                            <li><span>Focus</span><b>Security ML + Trading Infrastructure</b></li>
+                            <li><span>Strengths</span><b>Performance, Systems Design, Data Pipelines</b></li>
                             <li><span>Open to</span><b>Internships / Roles</b></li>
                         </ul>
                         <div class="small">
-                            Tip: Replace placeholders (YOUR_GITHUB, resume link, your name).
+                            Tip: Update GitHub / resume / contact links to your real profiles.
                         </div>
                     </div>
                 </aside>
             </div>
         </section>
 
+        <!-- ── PROJECTS ──────────────────────────────────────────── -->
         <section id="projects" class="section">
             <div class="container section-head">
                 <h2>Projects</h2>
@@ -90,205 +129,465 @@
             </div>
 
             <div class="container grid" id="projectGrid">
-                <!-- 1 -->
-                <article class="project card" data-tags="ml cpp">
+
+                <!-- ── 1 · GPU DDoS Detection ── -->
+                <article class="project card" data-tags="ml cpp python research">
                     <div class="project-top">
-                        <h3>Senior Thesis — GPU DDoS Detection (KNN + OC-SVM)</h3>
+                        <div class="project-title-row">
+                            <h3>GPU-Accelerated DDoS Detection &amp; Classification</h3>
+                            <span class="math-badge">∑ Math Core</span>
+                        </div>
+                        <p class="card-subtitle">Senior Thesis</p>
                         <p class="muted">
-                            Automated DDoS detection pipeline using KNN and One-Class SVM, implemented in C++ with GPU
-                            acceleration.
+                            Real-time DDoS detection for NAT-obscured enterprise networks: rolling-window feature
+                            engineering, GPU-accelerated k-NN &amp; OC-SVM inference, and FastAPI microservices
+                            validated in a GNS3 simulation.
                         </p>
                     </div>
-                    <ul class="bullets">
-                        <li>Real-time classification design (feature extraction → inference → alerting)</li>
-                        <li>Performance focus: C++ + GPU for low latency</li>
-                        <li>Modeling: anomaly detection via OC-SVM + baseline KNN</li>
-                    </ul>
+
+                    <div class="spec-grid" aria-label="Project specifications">
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⚡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Latency</span>
+                                <span class="spec-value">5s window</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">◈</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Models</span>
+                                <span class="spec-value">k-NN · OC-SVM</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⬡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Bridge</span>
+                                <span class="spec-value">pybind11</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">▸</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Deploy</span>
+                                <span class="spec-value">FastAPI · GNS3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- hover-to-reveal terminal -->
+                    <div class="terminal-preview" aria-hidden="true">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="tdot red"></span>
+                                <span class="tdot yellow"></span>
+                                <span class="tdot green"></span>
+                            </div>
+                            <span class="terminal-filename">ddos_classifier.cu</span>
+                        </div>
+                        <pre class="terminal-body"><code><span class="tok-kw">__global__ void</span> <span class="tok-fn">knn_distances</span>(
+  <span class="tok-kw">const</span> <span class="tok-type">float</span>* __restrict__ features,
+  <span class="tok-kw">const</span> <span class="tok-type">float</span>* __restrict__ train,
+  <span class="tok-type">float</span>* dists, <span class="tok-type">int</span> n) {
+  <span class="tok-type">int</span> tid = blockIdx.x * blockDim.x
+           + threadIdx.x;
+  <span class="tok-kw">if</span> (tid >= n) <span class="tok-kw">return</span>;
+  <span class="tok-cmt">// parallel Euclidean distance — GPU</span>
+  <span class="tok-type">float</span> dist = <span class="tok-num">0.0f</span>;
+  dists[tid] = sqrtf(dist);
+}</code></pre>
+                    </div>
+
                     <div class="tag-row">
-                        <span class="tag">ML</span><span class="tag">C++</span><span class="tag">GPU</span>
+                        <span class="tag">ML</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">CUDA</span>
+                        <span class="tag">FastAPI</span>
                     </div>
                     <div class="links">
-                        <a href="REPO_LINK_THESIS" target="_blank" rel="noreferrer">Code</a>
-                        <a href="DEMO_LINK_THESIS" target="_blank" rel="noreferrer">Demo</a>
-                        <a href="WRITEUP_LINK_THESIS" target="_blank" rel="noreferrer">Write-up</a>
+                        <a href="REPO_LINK_DDOS" target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
-                <!-- 2 -->
+                <!-- ── 2 · Algorithmic Trading Microservices ── -->
+                <article class="project card" data-tags="trading python research">
+                    <div class="project-top">
+                        <div class="project-title-row">
+                            <h3>Algorithmic Trading Microservices</h3>
+                        </div>
+                        <p class="card-subtitle">Docker · FastAPI · MySQL · IBKR</p>
+                        <p class="muted">
+                            Containerized, distributed trading system with clear service boundaries: screeners,
+                            strategies, execution gateway, and UI backend—all orchestrated via Docker Compose.
+                        </p>
+                    </div>
+
+                    <div class="spec-grid" aria-label="Project specifications">
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">≡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Throughput</span>
+                                <span class="spec-value">Multi-service</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">◈</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Broker</span>
+                                <span class="spec-value">IBKR API</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⬡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Stack</span>
+                                <span class="spec-value">FastAPI · MySQL</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">▸</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Signals</span>
+                                <span class="spec-value">MACD · VWAP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- hover-to-reveal terminal -->
+                    <div class="terminal-preview" aria-hidden="true">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="tdot red"></span>
+                                <span class="tdot yellow"></span>
+                                <span class="tdot green"></span>
+                            </div>
+                            <span class="terminal-filename">strategy.py</span>
+                        </div>
+                        <pre class="terminal-body"><code><span class="tok-kw">def</span> <span class="tok-fn">generate_signal</span>(self, df):
+  macd, sig = ta.<span class="tok-fn">MACD</span>(df[<span class="tok-str">"close"</span>])
+  vwap = (
+    (df[<span class="tok-str">"close"</span>] * df[<span class="tok-str">"volume"</span>]).cumsum()
+    / df[<span class="tok-str">"volume"</span>].cumsum()
+  )
+  <span class="tok-cmt"># MACD crossover + price above VWAP</span>
+  go_long = (macd > sig) &amp; \
+            (df[<span class="tok-str">"close"</span>] > vwap)
+  <span class="tok-kw">return</span> Signal.BUY <span class="tok-kw">if</span> go_long.iloc[-<span class="tok-num">1</span>] \
+         <span class="tok-kw">else</span> Signal.HOLD</code></pre>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag">Trading</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Microservices</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <div class="links">
+                        <a href="REPO_LINK_TRADING_MICROSERVICES" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+
+                <!-- ── 3 · Crypto Live Engine ── -->
                 <article class="project card" data-tags="trading python">
                     <div class="project-top">
-                        <h3>Trading Backtesting & Live Engine</h3>
+                        <div class="project-title-row">
+                            <h3>Crypto Live Engine</h3>
+                        </div>
+                        <p class="card-subtitle">Freqtrade Workflow via MySQL</p>
                         <p class="muted">
-                            Strategy research toolkit and production-style live trading engine with reusable components.
+                            Lightweight live-crypto workflow layer around Freqtrade where modules communicate through a
+                            shared MySQL database—keeping ops simple (no Redis/event bus required).
                         </p>
                     </div>
-                    <ul class="bullets">
-                        <li>Event-driven backtesting (orders, fills, slippage, fees)</li>
-                        <li>Live execution layer and monitoring hooks</li>
-                        <li>Strategy interface for fast experimentation</li>
-                    </ul>
+
+                    <div class="spec-grid" aria-label="Project specifications">
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⚡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Ingestion</span>
+                                <span class="spec-value">MySQL candles</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">◈</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Framework</span>
+                                <span class="spec-value">Freqtrade</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⬡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Stack</span>
+                                <span class="spec-value">Python · MySQL</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">▸</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Output</span>
+                                <span class="spec-value">PnL · Drawdown</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="tag-row">
-                        <span class="tag">Trading</span><span class="tag">Python</span><span class="tag">Systems</span>
+                        <span class="tag">Trading</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Live</span>
                     </div>
                     <div class="links">
-                        <a href="REPO_LINK_ENGINE" target="_blank" rel="noreferrer">Code</a>
-                        <a href="DEMO_LINK_ENGINE" target="_blank" rel="noreferrer">Demo</a>
+                        <a href="REPO_LINK_CRYPTO_LIVE" target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
-                <!-- 3 -->
-                <article class="project card" data-tags="trading ml">
+                <!-- ── 4 · Crypto Backtesting Engine ── -->
+                <article class="project card" data-tags="trading python research ml">
                     <div class="project-top">
-                        <h3>Portfolio Balancer — S&P 500 Volatility (STD-based)</h3>
+                        <div class="project-title-row">
+                            <h3>Crypto Backtesting Engine</h3>
+                            <span class="math-badge">∑ Math Core</span>
+                        </div>
+                        <p class="card-subtitle">Backtesting.py + MySQL</p>
                         <p class="muted">
-                            Rebalancing logic driven by rolling standard deviation of the S&P 500 to adapt risk
-                            exposure.
+                            Modular quantitative research framework for crypto markets: deterministic backtests,
+                            indicator pipelines, parameter optimization, benchmarking, and risk analytics.
                         </p>
                     </div>
-                    <ul class="bullets">
-                        <li>Rolling volatility estimator and allocation rules</li>
-                        <li>Backtested risk-on / risk-off variants</li>
-                        <li>Metrics: drawdown, Sharpe, turnover</li>
-                    </ul>
+
+                    <div class="spec-grid" aria-label="Project specifications">
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">≡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Tests</span>
+                                <span class="spec-value">Walk-forward</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">◈</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Metrics</span>
+                                <span class="spec-value">Sharpe · DD</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⬡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Stack</span>
+                                <span class="spec-value">Backtesting.py</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">▸</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Output</span>
+                                <span class="spec-value">Equity curves</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="tag-row">
-                        <span class="tag">Trading</span><span class="tag">Risk</span><span
-                            class="tag">Backtesting</span>
+                        <span class="tag">Trading</span>
+                        <span class="tag">Research</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Backtesting</span>
                     </div>
                     <div class="links">
-                        <a href="REPO_LINK_BALANCER" target="_blank" rel="noreferrer">Code</a>
-                        <a href="WRITEUP_LINK_BALANCER" target="_blank" rel="noreferrer">Notes</a>
+                        <a href="REPO_LINK_CRYPTO_BACKTEST" target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
-                <!-- 4 -->
-                <article class="project card" data-tags="ml trading python">
+                <!-- ── 5 · Portfolio Balancer / Stock Classifier ── -->
+                <article class="project card" data-tags="trading python ml research">
                     <div class="project-top">
-                        <h3>Live Trading + Backtesting AI Model (MLOps Setup)</h3>
+                        <div class="project-title-row">
+                            <h3>Portfolio Balancer / Stock Classifier</h3>
+                            <span class="math-badge">∑ Math Core</span>
+                        </div>
+                        <p class="card-subtitle">Robust Z-Score Screener</p>
                         <p class="muted">
-                            End-to-end ML workflow: training, versioning, deployment, and evaluation tied into backtest
-                            + live runs.
+                            Relative-value stock screener that enriches tickers with valuation inputs, computes robust
+                            z-scores, and classifies names into Buy/Hold/Sell with optional covariance exports.
                         </p>
                     </div>
-                    <ul class="bullets">
-                        <li>Training pipelines + reproducibility (configs, seeds, artifacts)</li>
-                        <li>Model registry + experiment tracking (MLOps pattern)</li>
-                        <li>Drift monitoring / periodic retraining hooks</li>
-                    </ul>
+
+                    <div class="spec-grid" aria-label="Project specifications">
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">△</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Method</span>
+                                <span class="spec-value">Tukey / MAD</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">◈</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Output</span>
+                                <span class="spec-value">Buy·Hold·Sell</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⬡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Exports</span>
+                                <span class="spec-value">Cov Matrix</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">▸</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Stack</span>
+                                <span class="spec-value">Python · Excel</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="tag-row">
-                        <span class="tag">ML</span><span class="tag">Trading</span><span class="tag">MLOps</span>
+                        <span class="tag">Trading</span>
+                        <span class="tag">ML</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Stats</span>
                     </div>
                     <div class="links">
-                        <a href="REPO_LINK_MLOPS" target="_blank" rel="noreferrer">Code</a>
-                        <a href="ARCH_LINK_MLOPS" target="_blank" rel="noreferrer">Architecture</a>
+                        <a href="REPO_LINK_STOCK_CLASSIFIER" target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
-                <!-- 5 -->
-                <article class="project card" data-tags="cpp">
-                    <div class="project-top">
-                        <h3>C++ OOP</h3>
-                        <p class="muted">Object-oriented patterns, memory management, and clean architecture in modern
-                            C++.</p>
-                    </div>
-                    <ul class="bullets">
-                        <li>RAII, rule-of-five, smart pointers</li>
-                        <li>Interfaces, polymorphism, templates</li>
-                        <li>Unit tests + small demo apps</li>
-                    </ul>
-                    <div class="tag-row">
-                        <span class="tag">C++</span><span class="tag">OOP</span>
-                    </div>
-                    <div class="links">
-                        <a href="REPO_LINK_CPP_OOP" target="_blank" rel="noreferrer">Code</a>
-                    </div>
-                </article>
-
-                <!-- 6 -->
-                <article class="project card" data-tags="python">
-                    <div class="project-top">
-                        <h3>Python OOP</h3>
-                        <p class="muted">OOP fundamentals, design patterns, and practical mini-projects in Python.</p>
-                    </div>
-                    <ul class="bullets">
-                        <li>Dataclasses, typing, SOLID principles</li>
-                        <li>Patterns: factory, strategy, observer</li>
-                        <li>Testing + packaging basics</li>
-                    </ul>
-                    <div class="tag-row">
-                        <span class="tag">Python</span><span class="tag">OOP</span>
-                    </div>
-                    <div class="links">
-                        <a href="REPO_LINK_PY_OOP" target="_blank" rel="noreferrer">Code</a>
-                    </div>
-                </article>
-
-                <!-- 7 -->
+                <!-- ── 6 · The Snowbox — FractalTrees Engine ── -->
                 <article class="project card" data-tags="java">
                     <div class="project-top">
-                        <h3>Java OOP + DB — Fractal Tree</h3>
+                        <div class="project-title-row">
+                            <h3>The Snowbox — FractalTrees Engine</h3>
+                            <span class="math-badge">∑ Math Core</span>
+                        </div>
+                        <p class="card-subtitle">Java Swing</p>
                         <p class="muted">
-                            Java OOP project with database integration, modeling a fractal tree structure and
-                            persistence layer.
+                            Interactive procedural-art app: click-to-spawn snowflakes that fall, transform, and grow
+                            into recursive fractal trees, with gallery and export workflow.
                         </p>
                     </div>
-                    <ul class="bullets">
-                        <li>Entity modeling + DB schema design</li>
-                        <li>CRUD operations and query layer</li>
-                        <li>Visualization / generation logic (fractal tree)</li>
-                    </ul>
+
+                    <div class="spec-grid" aria-label="Project specifications">
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">△</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Render</span>
+                                <span class="spec-value">Recursive trees</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">◈</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Variation</span>
+                                <span class="spec-value">Stochastic</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⬡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Stack</span>
+                                <span class="spec-value">Java · Swing</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">▸</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Pattern</span>
+                                <span class="spec-value">Trig branching</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="tag-row">
-                        <span class="tag">Java</span><span class="tag">DB</span><span class="tag">OOP</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Graphics</span>
+                        <span class="tag">Recursion</span>
                     </div>
                     <div class="links">
-                        <a href="REPO_LINK_JAVA_FRACTAL" target="_blank" rel="noreferrer">Code</a>
+                        <a href="REPO_LINK_SNOWBOX" target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
-                <!-- 8 -->
-                <article class="project card" data-tags="research">
+                <!-- ── 7 · Asset Portfolio System ── -->
+                <article class="project card" data-tags="java cpp">
                     <div class="project-top">
-                        <h3>Smart Cities Research</h3>
+                        <div class="project-title-row">
+                            <h3>Asset Portfolio System</h3>
+                        </div>
+                        <p class="card-subtitle">OOP Design Showcase</p>
                         <p class="muted">
-                            Research on smart cities: sensing, optimization, data pipelines, and responsible deployment.
+                            Clean 3-level inheritance hierarchy modeling financial assets, demonstrating abstraction,
+                            polymorphism, encapsulation, and UML-driven design.
                         </p>
                     </div>
-                    <ul class="bullets">
-                        <li>IoT data collection and edge/cloud architecture</li>
-                        <li>Analytics for mobility, energy, and safety</li>
-                        <li>Privacy / governance considerations</li>
-                    </ul>
+
+                    <div class="spec-grid" aria-label="Project specifications">
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⬡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Design</span>
+                                <span class="spec-value">3-level hier.</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">◈</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Pattern</span>
+                                <span class="spec-value">Polymorphism</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">▸</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Stack</span>
+                                <span class="spec-value">Python · UML</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">≡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Coverage</span>
+                                <span class="spec-value">Multi-asset</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="tag-row">
-                        <span class="tag">Research</span><span class="tag">IoT</span><span class="tag">Data</span>
+                        <span class="tag">OOP</span>
+                        <span class="tag">UML</span>
+                        <span class="tag">Design</span>
                     </div>
                     <div class="links">
-                        <a href="WRITEUP_LINK_SMARTCITIES" target="_blank" rel="noreferrer">Notes</a>
+                        <a href="REPO_LINK_ASSET_PORTFOLIO" target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
+
             </div>
         </section>
 
+        <!-- ── SKILLS ─────────────────────────────────────────────── -->
         <section id="skills" class="section alt">
             <div class="container two-col">
                 <div>
                     <h2>Skills</h2>
-                    <p class="muted">A quick snapshot of tools I’m comfortable with.</p>
-
                     <div class="skill-grid">
                         <div class="card mini">
-                            <h3>C++ / Performance</h3>
-                            <p>OOP, RAII, multithreading, profiling, GPU basics</p>
+                            <h3>C++ / CUDA / Performance</h3>
+                            <p>Modern C++ (RAII), profiling, GPU acceleration, native bindings (pybind11)</p>
                         </div>
                         <div class="card mini">
-                            <h3>Python</h3>
-                            <p>Backtesting, data pipelines, ML workflows, testing</p>
+                            <h3>Python / Data</h3>
+                            <p>FastAPI, pipelines, backtesting/research tooling, testing, automation</p>
                         </div>
                         <div class="card mini">
-                            <h3>ML / MLOps</h3>
-                            <p>Modeling, evaluation, tracking, deployment patterns</p>
+                            <h3>Systems / DevOps</h3>
+                            <p>Docker Compose, service decomposition, CI/CD patterns, Cisco, Fortinet</p>
                         </div>
                         <div class="card mini">
-                            <h3>Java / DB</h3>
-                            <p>OOP, persistence, schema design, CRUD patterns</p>
+                            <h3>Java</h3>
+                            <p>OOP, Swing UI, persistence concepts, clean architecture</p>
                         </div>
                     </div>
                 </div>
@@ -296,38 +595,46 @@
                 <div class="card">
                     <h3>About</h3>
                     <p>
-                        Write 3–5 lines about what you’re aiming for (roles, topics, what you enjoy building).
-                        Keep it specific: performance ML systems, trading infrastructure, research, etc.
+                        I like building systems that are easy to reason about: clear interfaces, measurable performance,
+                        and reproducible outputs. Recently, that's meant GPU-accelerated security ML, and DB-backed
+                        trading workflows (live + research).
                     </p>
                     <ul class="bullets">
-                        <li>Favorite areas: low-latency systems, reproducible research, robust evaluation</li>
-                        <li>Interested in: quant, ML engineering, applied research</li>
+                        <li>Interests: low-latency inference, distributed services, quant research infrastructure</li>
+                        <li>Current focus: end-to-end trading pipelines and real-time network anomaly detection</li>
                     </ul>
                 </div>
             </div>
         </section>
 
+        <!-- ── RESEARCH ───────────────────────────────────────────── -->
         <section id="research" class="section">
             <div class="container">
                 <h2>Research</h2>
-                <p class="muted">
-                    Add publications, posters, or a short reading list here. Keep it simple and link out.
-                </p>
+                <p class="muted">Selected applied research areas and write-ups.</p>
 
                 <div class="card">
-                    <h3>Smart Cities</h3>
+                    <h3>Real-Time DDoS Detection in NAT Environments</h3>
                     <ul class="bullets">
-                        <li>Topic A: e.g., mobility prediction, sensor fusion</li>
-                        <li>Topic B: e.g., anomaly detection for infrastructure</li>
-                        <li>Topic C: e.g., privacy-preserving analytics</li>
+                        <li>Behavior-based anomaly detection (k-NN + OC-SVM) on rolling-window traffic features</li>
+                        <li>Microservice architecture for capture/analysis + per-IP state tracking</li>
+                        <li>GPU acceleration for throughput and reduced inference latency via pybind11</li>
                     </ul>
-                    <div class="links">
-                        <a href="WRITEUP_LINK_SMARTCITIES" target="_blank" rel="noreferrer">Research Notes</a>
-                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 14px;">
+                    <h3>Quant Research Tooling</h3>
+                    <ul class="bullets">
+                        <li>Robust statistics for relative-value screening and ranking (Tukey fences, median/MAD
+                            z-scores)</li>
+                        <li>Deterministic backtesting workflows with clear data lineage and walk-forward validation</li>
+                        <li>Risk analytics: drawdowns, covariance matrices, and portfolio-level evaluation</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+        <!-- ── CONTACT ────────────────────────────────────────────── -->
         <section id="contact" class="section alt">
             <div class="container contact">
                 <div>
@@ -339,24 +646,14 @@
                         <li><span>LinkedIn</span><b>/in/YOUR_LINKEDIN</b></li>
                     </ul>
                 </div>
-
-                <div class="card">
-                    <h3>Want the “multi-page” version?</h3>
-                    <p class="muted">
-                        If you later want a Projects page per repo + blog posts, I can convert this to Jekyll or Astro.
-                    </p>
-                    <div class="small">
-                        For now this single page is simplest for GitHub Pages.
-                    </div>
-                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <span>© <span id="year"></span> Your Name</span>
-            <span class="muted">Built for GitHub Pages</span>
+            <span>© <span id="year"></span> Nikola Georgiev</span>
+            <span>GPU ML · Quant Research · Systems Engineering</span>
         </div>
     </footer>
 
