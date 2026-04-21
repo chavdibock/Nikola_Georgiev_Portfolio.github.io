@@ -1,0 +1,2 @@
+[submodule "Portfolio/Senior_Thesis/network_analyzer/algorithms/pybind11"]
+	url = https://github.com/pybind/pybind11.git
