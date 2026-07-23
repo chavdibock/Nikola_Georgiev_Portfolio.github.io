@@ -1,0 +1,110 @@
+[
+  {
+    "iteration": 0,
+    "scenario": "surge",
+    "penetration_rate": 0.05,
+    "training_mode": "curriculum",
+    "av_loss": 23.49216938018799,
+    "signal_loss": 1774.0526580810547,
+    "region_loss": 113.15471458435059,
+    "av_transitions": 253.0,
+    "signal_transitions": 490.0,
+    "region_transitions": 12.0
+  },
+  {
+    "iteration": 1,
+    "scenario": "rush_hour",
+    "penetration_rate": 0.05,
+    "training_mode": "curriculum",
+    "av_loss": 9.96970248222351,
+    "signal_loss": 1456.3399353027344,
+    "region_loss": 63.619038581848145,
+    "av_transitions": 89.0,
+    "signal_transitions": 486.0,
+    "region_transitions": 12.0
+  },
+  {
+    "iteration": 2,
+    "scenario": "uniform",
+    "penetration_rate": 0.05,
+    "training_mode": "curriculum",
+    "av_loss": 22.57468032836914,
+    "signal_loss": 2016.5167388916016,
+    "region_loss": 157.8117218017578,
+    "av_transitions": 383.0,
+    "signal_transitions": 484.0,
+    "region_transitions": 12.0
+  },
+  {
+    "iteration": 0,
+    "scenario": "surge",
+    "penetration_rate": 0.1,
+    "training_mode": "curriculum",
+    "av_loss": 23.49216938018799,
+    "signal_loss": 1774.0526580810547,
+    "region_loss": 113.15471458435059,
+    "av_transitions": 253.0,
+    "signal_transitions": 490.0,
+    "region_transitions": 12.0
+  },
+  {
+    "iteration": 1,
+    "scenario": "rush_hour",
+    "penetration_rate": 0.1,
+    "training_mode": "curriculum",
+    "av_loss": 25.856724739074707,
+    "signal_loss": 1512.4033203125,
+    "region_loss": 51.422903060913086,
+    "av_transitions": 222.0,
+    "signal_transitions": 490.0,
+    "region_transitions": 12.0
+  },
+  {
+    "iteration": 2,
+    "scenario": "uniform",
+    "penetration_rate": 0.1,
+    "training_mode": "curriculum",
+    "av_loss": 36.31150436401367,
+    "signal_loss": 2329.557373046875,
+    "region_loss": 152.5003433227539,
+    "av_transitions": 653.0,
+    "signal_transitions": 487.0,
+    "region_transitions": 12.0
+  },
+  {
+    "iteration": 0,
+    "scenario": "surge",
+    "penetration_rate": 0.2,
+    "training_mode": "curriculum",
+    "av_loss": 27.878196716308594,
+    "signal_loss": 2119.7454528808594,
+    "region_loss": 104.43441963195801,
+    "av_transitions": 846.0,
+    "signal_transitions": 495.0,
+    "region_transitions": 12.0
+  },
+  {
+    "iteration": 1,
+    "scenario": "rush_hour",
+    "penetration_rate": 0.2,
+    "training_mode": "curriculum",
+    "av_loss": 30.346148133277893,
+    "signal_loss": 1491.8676147460938,
+    "region_loss": 28.895945072174072,
+    "av_transitions": 950.0,
+    "signal_transitions": 490.0,
+    "region_transitions": 12.0
+  },
+  {
+    "iteration": 2,
+    "scenario": "uniform",
+    "penetration_rate": 0.2,
+    "training_mode": "curriculum",
+    "av_loss": 15.916517700467791,
+    "signal_loss": 2180.9561462402344,
+    "region_loss": 149.89163208007812,
+    "av_transitions": 1679.0,
+    "signal_transitions": 488.0,
+    "region_transitions": 12.0
+  }
+]

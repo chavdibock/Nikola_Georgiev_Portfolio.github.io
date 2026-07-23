@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+  <input>
+    <net-file value="../../network/grid_4x4.net.xml" />
+    <route-files value="surge.rou.xml" />
+  </input>
+  <time>
+    <begin value="0" />
+    <step-length value="1" />
+  </time>
+</configuration>

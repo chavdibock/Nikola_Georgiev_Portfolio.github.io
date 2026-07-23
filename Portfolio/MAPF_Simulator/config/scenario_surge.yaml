@@ -1,0 +1,9 @@
+{
+  "scenario": "surge",
+  "duration_s": 1800,
+  "base_vehicles_per_hour_per_entry": 90.0,
+  "surge_side": "west",
+  "surge_entry_index": 1,
+  "multiplier_curve": [[0, 1.0], [300, 4.0], [900, 4.0], [1200, 1.0], [1800, 1.0]]
+}
+

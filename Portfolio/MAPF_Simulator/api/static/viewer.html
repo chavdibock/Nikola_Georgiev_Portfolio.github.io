@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joint AV–Signal Experiment Viewer</title>
+  <link rel="stylesheet" href="/static/viewer.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">LOCAL RESEARCH SIMULATOR</p>
+      <h1>Joint AV–Signal Co-Training</h1>
+    </div>
+    <div id="connection" class="pill offline">No session</div>
+  </header>
+
+  <main>
+    <aside class="panel controls">
+      <h2>Experiment</h2>
+      <label>Scenario
+        <select id="scenario">
+          <option value="surge">One-sided surge</option>
+          <option value="rush_hour">Rush hour</option>
+          <option value="uniform">Uniform traffic</option>
+        </select>
+      </label>
+      <label>Control mode
+        <select id="mode">
+          <option value="trained">Joint agent environment</option>
+          <option value="baseline">Fixed-time baseline</option>
+        </select>
+      </label>
+      <label>AV penetration
+        <select id="penetration">
+          <option value="0.05">5%</option>
+          <option value="0.10">10%</option>
+          <option value="0.20" selected>20%</option>
+        </select>
+      </label>
+      <label>Seed
+        <input id="seed" type="number" value="42">
+      </label>
+      <label>Playback delay
+        <input id="delay" type="range" min="20" max="1000" value="120" step="20">
+        <span id="delayValue">120 ms</span>
+      </label>
+      <div class="button-grid">
+        <button id="create" class="primary">Create</button>
+        <button id="run" disabled>Run</button>
+        <button id="pause" disabled>Pause</button>
+        <button id="single" disabled>Step</button>
+        <button id="reset" disabled>Reset</button>
+        <button id="stop" class="danger" disabled>Stop</button>
+      </div>
+      <p class="note">Joint mode submits one batched neutral action set per tick. PPO training uses the same API through the training client.</p>
+      <div class="legend">
+        <span><i class="human"></i> Human</span>
+        <span><i class="av"></i> AV</span>
+        <span><i class="green"></i> Active green</span>
+      </div>
+    </aside>
+
+    <section class="stage panel">
+      <div class="stage-head">
+        <div><span>SIM TIME</span><strong id="simTime">0 s</strong></div>
+        <div><span>VEHICLES</span><strong id="vehicleCount">0</strong></div>
+        <div><span>SESSION</span><strong id="sessionId">—</strong></div>
+      </div>
+      <canvas id="map" width="980" height="720"></canvas>
+    </section>
+
+    <aside class="panel metrics">
+      <h2>Live metrics</h2>
+      <dl>
+        <div><dt>Travel time</dt><dd id="avg_travel_time">0.00 s</dd></div>
+        <div><dt>Wait time</dt><dd id="avg_wait_time">0.00 s</dd></div>
+        <div><dt>Throughput</dt><dd id="throughput">0.00 /h</dd></div>
+        <div><dt>Fairness</dt><dd id="fairness_index">1.000</dd></div>
+        <div><dt>CO₂</dt><dd id="co2_kg">0.000 kg</dd></div>
+        <div><dt>Fuel</dt><dd id="fuel_l">0.000 L</dd></div>
+        <div><dt>Max queue</dt><dd id="max_queue_length">0</dd></div>
+      </dl>
+      <h2>Active rewards</h2>
+      <pre id="rewards">Waiting for a state frame…</pre>
+      <p id="error" class="error"></p>
+    </aside>
+  </main>
+
+  <script src="/static/viewer.js"></script>
+</body>
+</html>

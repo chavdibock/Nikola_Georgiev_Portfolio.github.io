@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
-        content="Nikola Georgiev — projects in GPU-accelerated ML for security, algorithmic trading microservices, and quant research tooling." />
+        content="Nikola Georgiev — ML research and MLOps infrastructure: GPU-accelerated security models, algorithmic trading microservices, and quant research tooling." />
     <title>Nikola Georgiev — Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
                     </div>
                     <div>
                         <h1>Nikola Georgiev</h1>
-                        <p class="subtitle">GPU ML · Security Systems · Algo Trading · Microservices</p>
+                        <p class="subtitle">ML Research · MLOps Infrastructure · Security Systems · Algo Trading</p>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
             <div class="sys-item">
                 <span class="sys-dot violet" aria-hidden="true"></span>
                 <span class="sys-key">Academic Focus</span>
-                <span class="sys-val">AI Security · Quant Research</span>
+                <span class="sys-val">ML Research · MLOps</span>
             </div>
             <div class="sys-item sys-time">
                 <span class="sys-key">Status</span>
@@ -70,11 +70,13 @@
         <section class="hero">
             <div class="container hero-inner">
                 <div class="hero-copy">
-                    <h2>Building high-performance <span class="gradient-text">ML + trading systems.</span></h2>
+                    <h2>Research in <span class="gradient-text">ML + MLOps Infrastructure</span></h2>
                     <p>
-                        I build real-time anomaly detection pipelines, containerized trading infrastructure, and
-                        research-grade backtesting/analytics tooling. Below are selected projects with a focus on
-                        performance, reliability, and reproducibility.
+                        I research applied machine learning — real-time anomaly detection, quantitative modeling —
+                        and build the MLOps infrastructure that takes it into production: containerized
+                        training/inference pipelines, FastAPI microservices, and reproducible backtesting/analytics
+                        systems. Below are selected projects with a focus on performance, reliability, and
+                        reproducibility.
                     </p>
 
                     <div class="cta-row">
@@ -101,8 +103,8 @@
                     <div class="card">
                         <h3>Quick Info</h3>
                         <ul class="meta">
-                            <li><span>Focus</span><b>Security ML + Trading Infrastructure</b></li>
-                            <li><span>Strengths</span><b>Performance, Systems Design, Data Pipelines</b></li>
+                            <li><span>Focus</span><b>ML Research + MLOps Infrastructure</b></li>
+                            <li><span>Strengths</span><b>Model Pipelines, Systems Design, Data Infrastructure</b></li>
                             <li><span>Open to</span><b>Internships / Roles</b></li>
                         </ul>
                         <div class="small">
@@ -206,9 +208,91 @@
                         <span class="tag">FastAPI</span>
                     </div>
                     <div class="links">
-                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Senior_Thesis" target="_blank" rel="noreferrer">Repository</a>
+                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Senior_Thesis"
+                            target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
+
+
+
+                 <!-- ── 8 · Joint AV–Signal Co-Training (MAPF Simulator) ── -->
+                <article class="project card" data-tags="ml python research">
+                    <div class="project-top">
+                        <div class="project-title-row">
+                            <h3>Joint AV–Signal Co-Training</h3>
+                            <span class="math-badge">∑ Math Core</span>
+                        </div>
+                        <p class="card-subtitle">Multi-Agent PPO · SUMO Traffic Simulation</p>
+                        <p class="muted">
+                            Autonomous vehicles and city traffic signals that learn to talk to each other and both
+                            act on what they hear—three cooperating agent families trained jointly with a
+                            from-scratch PyTorch PPO inside a SUMO-simulated 4×4 city grid.
+                        </p>
+                    </div>
+
+                    <div class="spec-grid" aria-label="Project specifications">
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⚡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Agents</span>
+                                <span class="spec-value">AV · Signal · Region</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">◈</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Algorithm</span>
+                                <span class="spec-value">Custom PPO</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">⬡</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Sim</span>
+                                <span class="spec-value">SUMO · TraCI</span>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-icon" aria-hidden="true">▸</span>
+                            <div class="spec-detail">
+                                <span class="spec-label">Deploy</span>
+                                <span class="spec-value">Docker · FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- hover-to-reveal terminal -->
+                    <div class="terminal-preview" aria-hidden="true">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="tdot red"></span>
+                                <span class="tdot yellow"></span>
+                                <span class="tdot green"></span>
+                            </div>
+                            <span class="terminal-filename">reward_calculator.py</span>
+                        </div>
+                        <pre class="terminal-body"><code><span class="tok-kw">def</span> <span class="tok-fn">jains_fairness</span>(values: list[<span class="tok-type">float</span>]) -> <span class="tok-type">float</span>:
+  <span class="tok-cmt"># all-zero waits are treated as perfectly fair</span>
+  <span class="tok-kw">if not</span> values <span class="tok-kw">or</span> <span class="tok-fn">all</span>(v == <span class="tok-num">0.0</span> <span class="tok-kw">for</span> v <span class="tok-kw">in</span> values):
+    <span class="tok-kw">return</span> <span class="tok-num">1.0</span>
+  <span class="tok-kw">return</span> <span class="tok-fn">sum</span>(values) ** <span class="tok-num">2</span> / (
+    <span class="tok-fn">len</span>(values) * <span class="tok-fn">sum</span>(v * v <span class="tok-kw">for</span> v <span class="tok-kw">in</span> values)
+  )</code></pre>
+                    </div>
+
+                    <div class="tag-row">
+                        <span class="tag">ML</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Multi-Agent RL</span>
+                    </div>
+                    <div class="links">
+                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/MAPF_Simulator" target="_blank" rel="noreferrer">Repository</a>
+                    </div>
+                </article>
+
+
+
 
                 <!-- ── 2 · Algorithmic Trading Microservices ── -->
                 <article class="project card" data-tags="trading python research">
@@ -284,7 +368,8 @@
                         <span class="tag">Docker</span>
                     </div>
                     <div class="links">
-                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/IBKR_Trading_Engine" target="_blank" rel="noreferrer">Repository</a>
+                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/IBKR_Trading_Engine"
+                            target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
@@ -339,7 +424,8 @@
                         <span class="tag">Live</span>
                     </div>
                     <div class="links">
-                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Crypto_Live_Engine" target="_blank" rel="noreferrer">Repository</a>
+                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Crypto_Live_Engine"
+                            target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
@@ -395,7 +481,8 @@
                         <span class="tag">Backtesting</span>
                     </div>
                     <div class="links">
-                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Crypto_Backtesting_Engine" target="_blank" rel="noreferrer">Repository</a>
+                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Crypto_Backtesting_Engine"
+                            target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
@@ -451,7 +538,8 @@
                         <span class="tag">Stats</span>
                     </div>
                     <div class="links">
-                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Volatility_Portfolio_Balancer" target="_blank" rel="noreferrer">Repository</a>
+                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Volatility_Portfolio_Balancer"
+                            target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
@@ -506,7 +594,8 @@
                         <span class="tag">Recursion</span>
                     </div>
                     <div class="links">
-                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Snowbox" target="_blank" rel="noreferrer">Repository</a>
+                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Snowbox"
+                            target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
 
@@ -560,9 +649,11 @@
                         <span class="tag">Design</span>
                     </div>
                     <div class="links">
-                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Asset_Management_Portfolio" target="_blank" rel="noreferrer">Repository</a>
+                        <a href="https://github.com/chavdibock/Nikola_Georgiev_Portfolio.github.io/tree/main/Portfolio/Asset_Management_Portfolio"
+                            target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </article>
+
 
             </div>
         </section>

@@ -1,0 +1,11 @@
+.git
+.venv
+**/__pycache__
+**/*.pyc
+outputs/.matplotlib
+outputs/plots
+outputs/metrics_csv/*.log
+network/*.net.xml
+demand/**/*.rou.xml
+demand/**/*.sumocfg
+.env

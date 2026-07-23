@@ -1,0 +1,2 @@
+scenario,mode,penetration_rate,avg_travel_time,avg_wait_time,throughput,fairness_index,co2_kg,fuel_l,max_queue_length,completed_vehicles,simulated_seconds
+surge,trained,0.2,145.02083333333334,33.875,576.0,0.14310658561226855,29.000135444133896,12.619499150168958,2,48,300.0

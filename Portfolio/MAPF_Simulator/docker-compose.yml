@@ -1,0 +1,33 @@
+services:
+  simulator-service:
+    build:
+      context: .
+      dockerfile: docker/simulator.Dockerfile
+    init: true
+    ports:
+      - "${SIMULATOR_BIND_ADDRESS:-127.0.0.1}:${SIMULATOR_PORT:-8000}:8000"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+    stop_grace_period: 15s
+
+  training-service:
+    build:
+      context: .
+      dockerfile: docker/training.Dockerfile
+    init: true
+    depends_on:
+      simulator-service:
+        condition: service_healthy
+    environment:
+      SIMULATOR_API_URL: ${SIMULATOR_API_URL:-http://simulator-service:8000}
+      MPLCONFIGDIR: /app/outputs/.matplotlib
+    volumes:
+      - ./outputs:/app/outputs

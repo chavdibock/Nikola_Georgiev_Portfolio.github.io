@@ -1,0 +1,7 @@
+{
+  "scenario": "rush_hour",
+  "duration_s": 7200,
+  "base_vehicles_per_hour_per_entry": 120.0,
+  "multiplier_curve": [[0, 0.6], [1800, 1.2], [2700, 2.0], [4500, 2.0], [6000, 1.1], [7200, 0.6]]
+}
+

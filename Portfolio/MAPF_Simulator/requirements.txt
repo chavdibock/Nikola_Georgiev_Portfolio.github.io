@@ -1,0 +1,9 @@
+eclipse-sumo==1.27.1
+torch==2.7.1
+numpy==2.2.6
+matplotlib==3.10.3
+fastapi==0.115.14
+pydantic==2.11.7
+uvicorn==0.34.3
+httpx==0.28.1
+websockets==15.0.1

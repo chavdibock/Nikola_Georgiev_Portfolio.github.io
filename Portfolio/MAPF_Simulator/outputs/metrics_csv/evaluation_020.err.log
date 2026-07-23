@@ -1,0 +1,184 @@
+Warning: Teleporting vehicle 'surge_000010'; waited too long (jam), lane='left0A0_0', time=334.00.
+Warning: Teleporting vehicle 'surge_000014'; waited too long (jam), lane='top2C3_0', time=334.00.
+Warning: Vehicle 'surge_000010' ends teleporting on edge 'left0A0.180.00', time=334.00.
+Warning: Vehicle 'surge_000014' ends teleporting on edge 'top2C3.180.00', time=334.00.
+Warning: Teleporting vehicle 'surge_000016'; waited too long (jam), lane='bottom0A0_0', time=348.00.
+Warning: Vehicle 'surge_000016' ends teleporting on edge 'bottom0A0.180.00', time=348.00.
+Warning: Teleporting vehicle 'surge_000026'; waited too long (jam), lane='bottom1B0_0', time=378.00.
+Warning: Teleporting vehicle 'surge_000029'; waited too long (jam), lane='left0A0_0', time=378.00.
+Warning: Vehicle 'surge_000026' ends teleporting on edge 'bottom1B0.180.00', time=378.00.
+Warning: Vehicle 'surge_000029' ends teleporting on edge 'A0A1', time=380.00.
+Warning: Teleporting vehicle 'surge_000040'; waited too long (jam), lane='top2C3_0', time=394.00.
+Warning: Vehicle 'surge_000040' ends teleporting on edge 'C3C2', time=396.00.
+Warning: Teleporting vehicle 'surge_000051'; waited too long (jam), lane='bottom1B0_0', time=436.00.
+Warning: Vehicle 'surge_000051' ends teleporting on edge 'B0B1', time=438.00.
+Warning: Teleporting vehicle 'surge_000054'; waited too long (jam), lane='left2A2_0', time=439.00.
+Warning: Vehicle 'surge_000054' ends teleporting on edge 'left2A2.180.00', time=439.00.
+Warning: Teleporting vehicle 'surge_000066'; waited too long (jam), lane='right3D3_0', time=453.00.
+Warning: Vehicle 'surge_000066' ends teleporting on edge 'right3D3.180.00', time=453.00.
+Warning: Teleporting vehicle 'surge_000088'; waited too long (jam), lane='right2D2_0', time=514.00.
+Warning: Vehicle 'surge_000088' ends teleporting on edge 'right2D2.180.00', time=514.00.
+Warning: Teleporting vehicle 'surge_000100'; waited too long (jam), lane='right0D0_0', time=529.00.
+Warning: Teleporting vehicle 'surge_000096'; waited too long (jam), lane='bottom2C0_0', time=529.00.
+Warning: Vehicle 'surge_000096' ends teleporting on edge 'bottom2C0.180.00', time=529.00.
+Warning: Vehicle 'surge_000100' ends teleporting on edge 'right0D0.180.00', time=529.00.
+Warning: Teleporting vehicle 'surge_000110'; waited too long (jam), lane='top1B3_0', time=558.00.
+Warning: Vehicle 'surge_000110' ends teleporting on edge 'top1B3.180.00', time=558.00.
+Warning: Teleporting vehicle 'surge_000108'; waited too long (jam), lane='right1D1_0', time=559.00.
+Warning: Vehicle 'surge_000108' ends teleporting on edge 'right1D1.180.00', time=559.00.
+Warning: Teleporting vehicle 'surge_000119'; waited too long (jam), lane='top0A3_0', time=574.00.
+Warning: Vehicle 'surge_000119' ends teleporting on edge 'top0A3.180.00', time=574.00.
+Warning: Teleporting vehicle 'surge_000123'; waited too long (jam), lane='left2A2_0', time=589.00.
+Warning: Vehicle 'surge_000123' ends teleporting on edge 'left2A2.180.00', time=589.00.
+Warning: Teleporting vehicle 'surge_000139'; waited too long (jam), lane='top1B3_0', time=618.00.
+Warning: Vehicle 'surge_000139' ends teleporting on edge 'top1B3.180.00', time=618.00.
+Warning: Teleporting vehicle 'surge_000135'; waited too long (jam), lane='bottom2C0_0', time=619.00.
+Warning: Vehicle 'surge_000135' ends teleporting on edge 'bottom2C0.180.00', time=619.00.
+Warning: Teleporting vehicle 'surge_000126'; waited too long (jam), lane='right1D1_0', time=625.00.
+Warning: Vehicle 'surge_000126' ends teleporting on edge 'D1C1', time=627.00.
+Warning: Teleporting vehicle 'surge_000146'; waited too long (jam), lane='left3A3_0', time=633.00.
+Warning: Vehicle 'surge_000146' ends teleporting on edge 'left3A3.180.00', time=633.00.
+Warning: Teleporting vehicle 'surge_000143'; waited too long (jam), lane='bottom3D0_0', time=634.00.
+Warning: Vehicle 'surge_000143' ends teleporting on edge 'bottom3D0.180.00', time=634.00.
+Warning: Teleporting vehicle 'surge_000010'; waited too long (wrong lane), lane='left0A0.180.00_1', time=635.00.
+Warning: Teleporting vehicle 'surge_000014'; waited too long (yield), lane='top2C3.180.00_0', time=635.00.
+Warning: Vehicle 'surge_000010' ends teleporting on edge 'A0A1', time=635.00.
+Warning: Vehicle 'surge_000014' ends teleporting on edge 'C3C2', time=635.00.
+Warning: Teleporting vehicle 'surge_000085'; waited too long (jam), lane='left0A0_0', time=637.00.
+Warning: Vehicle 'surge_000085' ends teleporting on edge 'left0A0.180.00', time=637.00.
+Warning: Teleporting vehicle 'surge_000016'; waited too long (yield), lane='bottom0A0.180.00_0', time=649.00.
+Warning: Teleporting vehicle 'surge_000154'; waited too long (jam), lane='left1A1_0', time=649.00.
+Warning: Vehicle 'surge_000016' ends teleporting on edge 'A0A1', time=649.00.
+Warning: Vehicle 'surge_000154' ends teleporting on edge 'left1A1.180.00', time=649.00.
+Warning: Teleporting vehicle 'surge_000151'; waited too long (jam), lane='bottom0A0_0', time=657.00.
+Warning: Vehicle 'surge_000151' ends teleporting on edge 'bottom0A0.180.00', time=657.00.
+Warning: Teleporting vehicle 'surge_000163'; waited too long (jam), lane='bottom2C0_0', time=677.00.
+Warning: Teleporting vehicle 'surge_000026'; waited too long (yield), lane='bottom1B0.180.00_0', time=679.00.
+Warning: Vehicle 'surge_000026' ends teleporting on edge 'B0B1', time=679.00.
+Warning: Vehicle 'surge_000163' ends teleporting on edge 'bottom2C0.180.00', time=682.00.
+Warning: Teleporting vehicle 'surge_000029'; waited too long (jam), lane='A0A1_0', time=684.00.
+Warning: Vehicle 'surge_000029' ends teleporting on edge 'A0A1.180.00', time=684.00.
+Warning: Teleporting vehicle 'surge_000173'; waited too long (jam), lane='left3A3_0', time=694.00.
+Warning: Teleporting vehicle 'surge_000178'; waited too long (jam), lane='top2C3_0', time=694.00.
+Warning: Vehicle 'surge_000173' ends teleporting on edge 'left3A3.180.00', time=694.00.
+Warning: Vehicle 'surge_000178' ends teleporting on edge 'top2C3.180.00', time=694.00.
+Warning: Teleporting vehicle 'surge_000179'; waited too long (jam), lane='left1A1_0', time=699.00.
+Warning: Teleporting vehicle 'surge_000040'; waited too long (jam), lane='C3C2_0', time=700.00.
+Warning: Vehicle 'surge_000040' ends teleporting on edge 'C3C2.180.00', time=700.00.
+Warning: Vehicle 'surge_000179' ends teleporting on edge 'A1A2', time=701.00.
+Warning: Teleporting vehicle 'surge_000103'; waited too long (jam), lane='bottom1B0_0', time=739.00.
+Warning: Vehicle 'surge_000103' ends teleporting on edge 'bottom1B0.180.00', time=739.00.
+Warning: Teleporting vehicle 'surge_000054'; waited too long (jam), lane='left2A2.180.00_0', time=740.00.
+Warning: Vehicle 'surge_000054' ends teleporting on edge 'A2A1', time=740.00.
+Warning: Teleporting vehicle 'surge_000051'; waited too long (jam), lane='B0B1_0', time=742.00.
+Warning: Vehicle 'surge_000051' ends teleporting on edge 'B0B1.180.00', time=742.00.
+Warning: Teleporting vehicle 'surge_000066'; waited too long (yield), lane='right3D3.180.00_0', time=754.00.
+Warning: Teleporting vehicle 'surge_000204'; waited too long (jam), lane='right2D2_0', time=754.00.
+Warning: Vehicle 'surge_000066' ends teleporting on edge 'D3C3', time=754.00.
+Warning: Vehicle 'surge_000204' ends teleporting on edge 'D2C2', time=756.00.
+Warning: Teleporting vehicle 'surge_000231'; waited too long (jam), lane='top3D3_0', time=814.00.
+Warning: Vehicle 'surge_000231' ends teleporting on edge 'top3D3.180.00', time=814.00.
+Warning: Teleporting vehicle 'surge_000088'; waited too long (yield), lane='right2D2.180.00_0', time=815.00.
+Warning: Vehicle 'surge_000088' ends teleporting on edge 'D2D3', time=815.00.
+Warning: Teleporting vehicle 'surge_000238'; waited too long (jam), lane='right2D2_0', time=829.00.
+Warning: Vehicle 'surge_000238' ends teleporting on edge 'right2D2.180.00', time=829.00.
+Warning: Teleporting vehicle 'surge_000100'; waited too long (wrong lane), lane='right0D0.180.00_1', time=830.00.
+Warning: Teleporting vehicle 'surge_000096'; waited too long (yield), lane='bottom2C0.180.00_0', time=830.00.
+Warning: Vehicle 'surge_000096' ends teleporting on edge 'C0D0', time=830.00.
+Warning: Vehicle 'surge_000100' ends teleporting on edge 'D0bottom3', time=830.00.
+Warning: Teleporting vehicle 'surge_000228'; waited too long (jam), lane='right0D0_0', time=845.00.
+Warning: Vehicle 'surge_000228' ends teleporting on edge 'D0D1', time=847.00.
+Warning: Teleporting vehicle 'surge_000110'; waited too long (yield), lane='top1B3.180.00_0', time=859.00.
+Warning: Vehicle 'surge_000110' ends teleporting on edge 'B3B2', time=859.00.
+Warning: Teleporting vehicle 'surge_000108'; waited too long (jam), lane='right1D1.180.00_0', time=860.00.
+Warning: Vehicle 'surge_000108' ends teleporting on edge 'D1C1', time=860.00.
+Warning: Teleporting vehicle 'surge_000119'; waited too long (yield), lane='top0A3.180.00_0', time=875.00.
+Warning: Vehicle 'surge_000119' ends teleporting on edge 'A3A2', time=875.00.
+Warning: Teleporting vehicle 'surge_000123'; waited too long (yield), lane=':A2_15_0', time=891.00.
+Warning: Vehicle 'surge_000123' ends teleporting on edge 'A2A3', time=891.00.
+Warning: Teleporting vehicle 'surge_000105'; waited too long (jam), lane='left2A2_0', time=894.00.
+Warning: Vehicle 'surge_000105' ends teleporting on edge 'A2A1', time=896.00.
+Warning: Teleporting vehicle 'surge_000139'; waited too long (yield), lane=':B3_3_0', time=919.00.
+Warning: Vehicle 'surge_000139' ends teleporting on edge 'B3C3', time=919.00.
+Warning: Teleporting vehicle 'surge_000135'; waited too long (wrong lane), lane='bottom2C0.180.00_1', time=920.00.
+Warning: Vehicle 'surge_000135' ends teleporting on edge 'C0B0', time=920.00.
+Warning: Teleporting vehicle 'surge_000126'; waited too long (jam), lane='D1C1_0', time=931.00.
+Warning: Vehicle 'surge_000126' ends teleporting on edge 'D1C1.180.00', time=931.00.
+Warning: Teleporting vehicle 'surge_000146'; waited too long (yield), lane='left3A3.180.00_0', time=934.00.
+Warning: Teleporting vehicle 'surge_000289'; waited too long (jam), lane='top1B3_0', time=934.00.
+Warning: Vehicle 'surge_000146' ends teleporting on edge 'A3A2', time=934.00.
+Warning: Vehicle 'surge_000289' ends teleporting on edge 'top1B3.180.00', time=934.00.
+Warning: Teleporting vehicle 'surge_000143'; waited too long (yield), lane='bottom3D0.180.00_0', time=935.00.
+Warning: Vehicle 'surge_000143' ends teleporting on edge 'D0D1', time=935.00.
+Warning: Teleporting vehicle 'surge_000010'; waited too long (jam), lane='A0A1_1', time=936.00.
+Warning: Vehicle 'surge_000010' ends teleporting on edge 'A0A1.180.00', time=936.00.
+Warning: Teleporting vehicle 'surge_000085'; waited too long (wrong lane), lane='left0A0.180.00_1', time=938.00.
+Warning: Vehicle 'surge_000085' ends teleporting on edge 'A0A1', time=938.00.
+Warning: Teleporting vehicle 'surge_000014'; waited too long (jam), lane='C3C2_0', time=939.00.
+Warning: Vehicle 'surge_000014' ends teleporting on edge 'C2C1', time=941.00.
+Warning: Teleporting vehicle 'surge_000294'; waited too long (jam), lane='left0A0_0', time=949.00.
+Warning: Vehicle 'surge_000294' ends teleporting on edge 'left0A0.180.00', time=949.00.
+Warning: Teleporting vehicle 'surge_000154'; waited too long (yield), lane='left1A1.180.00_0', time=950.00.
+Warning: Vehicle 'surge_000154' ends teleporting on edge 'A1A0', time=950.00.
+Warning: Teleporting vehicle 'surge_000016'; waited too long (jam), lane='A0A1_0', time=953.00.
+Warning: Vehicle 'surge_000016' ends teleporting on edge 'A1A2', time=955.00.
+Warning: Teleporting vehicle 'surge_000151'; waited too long (yield), lane='bottom0A0.180.00_0', time=958.00.
+Warning: Vehicle 'surge_000151' ends teleporting on edge 'A0A1', time=958.00.
+Warning: Teleporting vehicle 'surge_000180'; waited too long (jam), lane='bottom0A0_0', time=961.00.
+Warning: Vehicle 'surge_000180' ends teleporting on edge 'A0A1', time=963.00.
+Warning: Teleporting vehicle 'surge_000242'; waited too long (jam), lane='left1A1_1', time=965.00.
+Warning: Vehicle 'surge_000242' ends teleporting on edge 'left1A1.180.00', time=965.00.
+Warning: Teleporting vehicle 'surge_000313'; waited too long (jam), lane='top2C3_0', time=979.00.
+Warning: Vehicle 'surge_000313' ends teleporting on edge 'C3C2', time=981.00.
+Warning: Teleporting vehicle 'surge_000026'; waited too long (jam), lane='B0B1_0', time=983.00.
+Warning: Teleporting vehicle 'surge_000163'; waited too long (yield), lane=':C0_11_0', time=983.00.
+Warning: Vehicle 'surge_000163' ends teleporting on edge 'C0B0', time=983.00.
+Warning: Vehicle 'surge_000026' ends teleporting on edge 'B1B2', time=985.00.
+Warning: Teleporting vehicle 'surge_000029'; waited too long (jam), lane=':A1_9_0', time=988.00.
+Warning: Vehicle 'surge_000029' ends teleporting on edge 'A1A2', time=988.00.
+Warning: Teleporting vehicle 'surge_000316'; waited too long (jam), lane='bottom2C0_0', time=994.00.
+Warning: Vehicle 'surge_000316' ends teleporting on edge 'bottom2C0.180.00', time=994.00.
+Warning: Teleporting vehicle 'surge_000173'; waited too long (yield), lane='left3A3.180.00_2', time=995.00.
+Warning: Teleporting vehicle 'surge_000178'; waited too long (yield), lane='top2C3.180.00_0', time=995.00.
+Warning: Vehicle 'surge_000173' ends teleporting on edge 'A3top0', time=995.00.
+Warning: Vehicle 'surge_000178' ends teleporting on edge 'C3C2', time=995.00.
+Warning: Teleporting vehicle 'surge_000040'; waited too long (jam), lane='C3C2.180.00_0', time=1001.00.
+Warning: Vehicle 'surge_000040' ends teleporting on edge 'C2C1', time=1001.00.
+Warning: Teleporting vehicle 'surge_000165'; waited too long (jam), lane='left1A1_0', time=1004.00.
+Warning: Teleporting vehicle 'surge_000179'; waited too long (jam), lane='A1A2_0', time=1005.00.
+Warning: Vehicle 'surge_000179' ends teleporting on edge 'A1A2.180.00', time=1005.00.
+Warning: Teleporting vehicle 'surge_000264'; waited too long (yield), lane='B0A0.180.00_0', time=1006.00.
+Warning: Vehicle 'surge_000165' ends teleporting on edge 'A1A0', time=1006.00.
+Warning: Vehicle 'surge_000264' ends teleporting on edge 'A0A1', time=1006.00.
+Warning: Teleporting vehicle 'surge_000335'; waited too long (jam), lane='bottom3D0_0', time=1038.00.
+Warning: Teleporting vehicle 'surge_000341'; waited too long (jam), lane='top1B3_0', time=1038.00.
+Warning: Vehicle 'surge_000335' ends teleporting on edge 'bottom3D0.180.00', time=1038.00.
+Warning: Teleporting vehicle 'surge_000339'; waited too long (jam), lane='right1D1_0', time=1039.00.
+Warning: Vehicle 'surge_000339' ends teleporting on edge 'right1D1.180.00', time=1039.00.
+Warning: Teleporting vehicle 'surge_000103'; waited too long (jam), lane='bottom1B0.180.00_0', time=1040.00.
+Warning: Vehicle 'surge_000103' ends teleporting on edge 'B0B1', time=1040.00.
+Warning: Vehicle 'surge_000341' ends teleporting on edge 'B3B2', time=1040.00.
+Warning: Teleporting vehicle 'surge_000051'; waited too long (jam), lane='B0B1.180.00_0', time=1043.00.
+Warning: Vehicle 'surge_000051' ends teleporting on edge 'B1B2', time=1043.00.
+Warning: Teleporting vehicle 'surge_000054'; waited too long (jam), lane='A2A1_0', time=1044.00.
+Warning: Vehicle 'surge_000054' ends teleporting on edge 'A2A1.180.00', time=1044.00.
+Warning: Teleporting vehicle 'surge_000275'; waited too long (jam), lane='bottom1B0_0', time=1050.00.
+Warning: Vehicle 'surge_000275' ends teleporting on edge 'bottom1B0.180.00', time=1050.00.
+Warning: Teleporting vehicle 'surge_000348'; waited too long (jam), lane='left3A3_0', time=1054.00.
+Warning: Vehicle 'surge_000348' ends teleporting on edge 'left3A3.180.00', time=1054.00.
+Warning: Teleporting vehicle 'surge_000066'; waited too long (jam), lane='D3C3_0', time=1058.00.
+Warning: Vehicle 'surge_000066' ends teleporting on edge 'D3C3.180.00', time=1058.00.
+Warning: Teleporting vehicle 'surge_000204'; waited too long (jam), lane='D2C2_0', time=1060.00.
+Warning: Vehicle 'surge_000204' ends teleporting on edge 'D2C2.180.00', time=1060.00.
+Warning: Teleporting vehicle 'surge_000354'; waited too long (jam), lane='left0A0_0', time=1068.00.
+Warning: Teleporting vehicle 'surge_000361'; waited too long (jam), lane='top3D3_0', time=1068.00.
+Warning: Vehicle 'surge_000361' ends teleporting on edge 'top3D3.180.00', time=1068.00.
+Warning: Teleporting vehicle 'surge_000360'; waited too long (jam), lane='top2C3_0', time=1069.00.
+Warning: Vehicle 'surge_000360' ends teleporting on edge 'top2C3.180.00', time=1069.00.
+Warning: Vehicle 'surge_000354' ends teleporting on edge 'A0A1', time=1070.00.
+Warning: Teleporting vehicle 'surge_000380'; waited too long (jam), lane='top3D3_0', time=1112.00.
+Warning: Teleporting vehicle 'surge_000377'; waited too long (jam), lane='top0A3_0', time=1114.00.
+Warning: Teleporting vehicle 'surge_000372'; waited too long (jam), lane='bottom0A0_0', time=1114.00.
+Warning: Vehicle 'surge_000377' ends teleporting on edge 'top0A3.180.00', time=1114.00.
+Warning: Vehicle 'surge_000380' ends teleporting on edge 'D3D2', time=1114.00.
+Warning: Vehicle 'surge_000372' ends teleporting on edge 'A0A1', time=1116.00.

@@ -1,0 +1,7 @@
+{
+  "scenario": "uniform",
+  "duration_s": 1800,
+  "base_vehicles_per_hour_per_entry": 100.0,
+  "multiplier_curve": [[0, 1.0], [1800, 1.0]]
+}
+
